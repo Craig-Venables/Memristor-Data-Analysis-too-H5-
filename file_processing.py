@@ -24,7 +24,17 @@ def file_analysis(df, plot_graph, save_df, device_path, re_save_graph, short_nam
 
     # Step 3: Continue creating DataFrame with metrics
     metrics_df = create_device_dataframe(v_data, c_data, v_data_ps, c_data_ps, v_data_ng, c_data_ng)
-    print(metrics_df)
+
+
+    # Debug: Print the metrics DataFrame for verification
+
+    # print("\nColumns in the Metrics DataFrame:")
+    # print(metrics_df.columns.tolist())  # Print all column names
+    #
+    # print("\nFirst few rows of the Metrics DataFrame:")
+    # print(metrics_df.head())  # Display the first few rows of the dataset
+
+
     # Step 4: Handle single or multiple sweeps
     if num_sweeps > 1:
         _, _, df_file_stats = handle_multiple_sweeps(metrics_df, num_sweeps, device_path, None, plot_graph,
@@ -32,8 +42,16 @@ def file_analysis(df, plot_graph, save_df, device_path, re_save_graph, short_nam
     else:
         _, _, df_file_stats = handle_single_sweep(metrics_df, None, device_path, plot_graph, re_save_graph)
 
-    # Return the processed DataFrame for storage in HDF5
-    return df_file_stats
+    # Return both DataFrames (raw data and metrics) for saving in main
+    return df_file_stats, metrics_df
+
+def file_analysis_endurance():
+    print("endurance file")
+    pass
+
+def file_analysis_retention():
+    print("retention file")
+    pass
 
 
 def create_device_dataframe(v_data, c_data, v_data_ps, c_data_ps, v_data_ng, c_data_ng):
