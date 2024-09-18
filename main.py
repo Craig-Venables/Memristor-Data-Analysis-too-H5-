@@ -4,6 +4,7 @@ from file_processing import file_analysis, file_analysis_endurance, file_analysi
 import warnings
 from tables import NaturalNameWarning
 from helpers import check_sweep_type  # Assuming this function is in check_sweep_type.py
+from equations import zero_devision_check
 
 
 warnings.filterwarnings('ignore', category=NaturalNameWarning)
@@ -123,22 +124,22 @@ with pd.HDFStore('memristor_data.h5') as store:
                     # Add the raw data DataFrame to the HDF5 file
                     key_raw = f'/{material}/{sample}/{section}/{device}/{filename}_raw'
                     store.put(key_raw, df_file_stats)
-                    print(f"Saved raw data for {filename} under {key_raw}")
+                    #print(f"Saved raw data for {filename} under {key_raw}")
 
                 if metrics_df is not None and not metrics_df.empty:
                     # Add the metrics DataFrame to the HDF5 file
                     key_metrics = f'/{material}/{sample}/{section}/{device}/{filename}_metrics'
                     store.put(key_metrics, metrics_df)
-                    print(f"Saved metrics data for {filename} under {key_metrics}")
+                    #print(f"Saved metrics data for {filename} under {key_metrics}")
 
                 # Increment the processed files count
                 processed_files += 1
 
                 # Print progress every X files
                 if processed_files % print_interval == 0:
-                    percent_completed = (processed_files / total_files) * 100
+                    percent_completed = (zero_devision_check(processed_files,total_files)) * 100
                     print(f"Processed {processed_files}/{total_files} files. {percent_completed:.2f}% done.")
 
     # Final percentage after all files have been processed
-    percent_completed = (processed_files / total_files) * 100
+    percent_completed = (zero_devision_check(processed_files,total_files)) * 100
     print(f"Processing complete: {processed_files}/{total_files} files. {percent_completed:.2f}% done.")
