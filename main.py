@@ -6,6 +6,7 @@ from tables import NaturalNameWarning
 from helpers import check_sweep_type  # Assuming this function is in check_sweep_type.py
 from equations import zero_devision_check
 
+# add check to see if the file already exists in h5 and if it does dont do any calculations!
 
 warnings.filterwarnings('ignore', category=NaturalNameWarning)
 
