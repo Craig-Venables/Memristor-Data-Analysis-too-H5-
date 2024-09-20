@@ -157,3 +157,40 @@ def handle_single_sweep(df, file_info, device_path, plot_graph, re_save_graph):
         plot_single_sweep_data(df, file_info, device_path, re_save_graph)
 
     return None, None, df_file_stats
+
+def read_file_to_dataframe(file):
+    try:
+        df = pd.read_csv(file, sep='\s+', header=0)
+        if 'voltage current' in df.columns:
+            df[['voltage', 'current']] = df['voltage current'].str.split(expand=True)
+            df.drop(columns=['voltage current'], inplace=True)
+        return df
+    except Exception as e:
+        print(f"Error reading file {file}: {e}")
+        return None
+
+def add_metadata(df, material, sample, section, device, filename):
+    df['Material'] = material
+    df['Sample'] = sample
+    df['Section'] = section
+    df['Device'] = device
+    df['Filename'] = filename
+
+
+# Analyze the file based on sweep type
+def analyze_file(sweep_type, analysis_params):
+    if sweep_type == 'Iv_sweep':
+        return file_analysis(**analysis_params)
+    elif sweep_type == 'Endurance':
+        return file_analysis_endurance(**analysis_params)
+    elif sweep_type == 'Retention':
+        return file_analysis_retention(**analysis_params)
+    else:
+        return None, None
+
+# Save raw data and metrics to HDF5
+def save_to_hdf5(store, key_raw, key_metrics, df_file_stats, metrics_df):
+    if df_file_stats is not None and not df_file_stats.empty:
+        store.put(key_raw, df_file_stats)
+    if metrics_df is not None and not metrics_df.empty:
+        store.put(key_metrics, metrics_df)

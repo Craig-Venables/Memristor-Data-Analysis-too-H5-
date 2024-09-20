@@ -261,3 +261,70 @@ def area_under_curve(voltage, current):
     area = np.trapz(current, voltage)
     # which ever is in np.trapz(y,x), Using a decreasing x corresponds to integrating in reverse: ie negative value?
     return area
+
+
+def update_device_metrics_summary(device_metrics_summary, filename, device, section, sample, material, metrics_df):
+    """ Update the device metrics summary with new metrics data. """
+
+    # Check if the device is already in the summary
+    if device not in device_metrics_summary:
+        # Initialize a new entry for the device if not present
+        device_metrics_summary[device] = {
+            'Filename': [],
+            'Material': material,
+            'Sample': sample,
+            'Section': section,
+            'total_files': 0,
+            'total_sweeps': 0,
+            'metrics': []
+        }
+
+    # Add the filename to the list of processed files for this device
+    device_metrics_summary[device]['Filename'].append(filename)
+
+    # Increment total files processed
+    device_metrics_summary[device]['total_files'] += 1
+
+    # Extract the number of sweeps from the metrics DataFrame
+    total_sweeps = metrics_df['num_sweeps'].sum() if 'num_sweeps' in metrics_df.columns else 1
+    device_metrics_summary[device]['total_sweeps'] += total_sweeps
+
+    # Store the metrics DataFrame
+    device_metrics_summary[device]['metrics'].append(metrics_df)
+
+
+# Write device summary to the correct location (depth 4)
+def write_device_summary(device_metrics_summary, summary_file):
+    """ Write the device-level metrics summary to a text file. """
+    with open(summary_file, 'w') as f:
+        for device, summary in device_metrics_summary.items():
+            material = summary['Material']
+            sample = summary['Sample']
+            section = summary['Section']
+
+            # Write the sample, section, and material headers
+            f.write(f"Material: {material}\n")
+            f.write(f"Sample: {sample}\n")
+            f.write(f"Section: {section}\n")
+            f.write(f"Device: {device}\n")
+            f.write(f"Total Files Processed: {summary['total_files']}\n")
+            f.write(f"Total Sweeps: {summary['total_sweeps']}\n")
+            #f.write(f"Files Processed:\n")
+
+            # # Write each filename for the device
+            # for filename in summary['Filename']:
+            #     f.write(f" - {filename}\n")
+
+            f.write(f"--- Metrics Summary ---\n")
+
+            # Write the first few rows of metrics from one file as a sample
+            if summary['metrics']:
+                sample_metrics = summary['metrics'][0].head()  # Just show a sample of the metrics
+                f.write(sample_metrics.to_string())
+            f.write("\n\n")
+    print(f"Summary written to {summary_file}")
+
+
+
+
+

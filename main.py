@@ -1,146 +1,93 @@
 import pandas as pd
 from pathlib import Path
-from file_processing import file_analysis, file_analysis_endurance, file_analysis_retention
-import warnings
+from helpers import generate_analysis_params, extract_file_info, check_if_file_exists, print_progress,check_for_nan,generate_hdf5_keys,check_sweep_type
+from file_processing import read_file_to_dataframe, add_metadata, analyze_file, save_to_hdf5
+from metrics_calculation import update_device_metrics_summary, write_device_summary
 from tables import NaturalNameWarning
-from helpers import check_sweep_type  # Assuming this function is in check_sweep_type.py
-from equations import zero_devision_check
+import warnings
 
-# add check to see if the file already exists in h5 and if it does dont do any calculations!
+#todo summary file needs chaging so its saved in level 4 not in the code level gpt was useless here
+
+# Constants for configuration
+FORCE_RECALCULATE = True  # Set to True to force recalculation and overwrite existing data in HDF5
+PRINT_INTERVAL = 50  # Number of files after which progress is printed
+OUTPUT_FILE = "skipped_files.txt"  # File to store skipped files or unknown sweep types
+SUMMARY_FILE = "device_metrics_summary.txt"  # File to store the device-level summary
 
 warnings.filterwarnings('ignore', category=NaturalNameWarning)
 
-# Helper function to check if the DataFrame contains NaN values
-def check_for_nan(df):
-    if df.isna().values.any():
-        print("File contains NaN values. Skipping...")
-        return True
-    return False
+def process_files(txt_files, base_dir, store):
+    processed_files = 0
+    current_sample = None
+    device_metrics_summary = {}  # Track metrics for each device
 
-# Function to generate parameters for file_analysis
-def generate_analysis_params(df, filename, base_dir, device):
-    """ Generate a dictionary of parameters to be passed to file_analysis """
-    return {
-        'df': df,
-        'plot_graph': False,            # Set to True if you want to plot
-        'save_df': False,               # We don't need to save CSV, we're saving to HDF5
-        'device_path': base_dir / device,  # Base path of the device
-        're_save_graph': False,         # Control graph re-saving
-        'short_name': filename,         # Short name of the file
-        'long_name': f"{filename}.csv"  # Long name (output filename)
-    }
-
-# Set up base directory dynamically (you can change this environment variable for different systems)
-user_dir = Path.home()  # Home directory of the user (works on any OS)
-
-# Construct the base path relative to the home directory or environment variable
-# base_dir = user_dir / Path("OneDrive - The University of Nottingham/Documents/Phd/2) Data/1) Devices/1) Memristors")
-# testing
-base_dir = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Memristors")
-
-# Recursively find all .txt files in the folder and subfolders at depth 6
-txt_files = list(f for f in base_dir.rglob('*.txt') if len(f.relative_to(base_dir).parts) == 6)
-
-# Count total files for the completion percentage
-total_files = len(txt_files)
-processed_files = 0  # Track how many files have been processed
-
-# Set a print interval (e.g., print progress every 5 files)
-print_interval = 50
-
-# Track the current sample to detect when it changes
-current_sample = None
-
-# Output file to store file paths that are skipped
-output_file = "skipped_files.txt"
-
-# Open an HDF5 file for writing (or appending to if it exists)
-with pd.HDFStore('memristor_data.h5') as store:
-    for i, file in enumerate(txt_files, 1):  # Enumerate to get file index for progress tracking
+    for i, file in enumerate(txt_files, 1):
         relative_path = file.relative_to(base_dir)
         depth = len(relative_path.parts)
 
-        # Only process files at depth 6 (already filtered, but double-checking)
-        if depth == 6:
-            filename = file.name             # Depth 6 -> Filename
-            device = relative_path.parts[4]  # Depth 5 -> Device
-            section = relative_path.parts[3] # Depth 4 -> Section
-            sample = relative_path.parts[2]  # Depth 3 -> Sample
-            material = relative_path.parts[1]# Depth 2 -> Material
+        if depth != 6:
+            continue
 
-            # Check if the sample has changed
-            if sample != current_sample:
-                current_sample = sample  # Update the current sample
-                print(f"Moving on to new sample: {sample}")
+        # Extract file information
+        filename, device, section, sample, material = extract_file_info(relative_path)
 
-            # Determine the file's sweep type using check_sweep_type
-            sweep_type = check_sweep_type(file, output_file)
+        # Generate keys for HDF5 storage
+        key_raw, key_metrics = generate_hdf5_keys(material, sample, section, device, filename)
 
-            # Skip files that don't match any expected sweep type
-            if sweep_type is None:
-                print(f"Skipping file {filename}, unknown sweep type.")
-                continue
+        # Check if the file exists in HDF5 and skip if necessary
+        if not FORCE_RECALCULATE and check_if_file_exists(store, key_raw):
+            print(f"File {filename} already exists in HDF5. Skipping...")
+            continue
 
-            # Read the file into a DataFrame
-            try:
-                # Try reading with appropriate delimiter (adjust as needed)
-                df = pd.read_csv(file, sep='\s+', header=0)
+        # Moving on to a new sample
+        if sample != current_sample:
+            current_sample = sample
+            print(f"Moving on to new sample: {sample}")
 
-                # If 'voltage current' is one column, split it into 'voltage' and 'current'
-                if 'voltage current' in df.columns:
-                    df[['voltage', 'current']] = df['voltage current'].str.split(expand=True)
-                    df.drop(columns=['voltage current'], inplace=True)
+        # Read the file and process it
+        df = read_file_to_dataframe(file)
+        if df is None or check_for_nan(df):
+            continue
 
-            except Exception as e:
-                print(f"Error reading file {file}: {e}")
-                continue  # Skip this file if there are errors
+        add_metadata(df, material, sample, section, device, filename)
 
-            # Skip if DataFrame contains NaN values
-            if check_for_nan(df):
-                continue
+        # Generate the analysis parameters
+        analysis_params = generate_analysis_params(df, filename, base_dir, device)
 
-            if df is not None and not df.empty:
-                # Add metadata as new columns to the DataFrame
-                df['Material'] = material
-                df['Sample'] = sample
-                df['Section'] = section
-                df['Device'] = device
-                df['Filename'] = filename
+        # Analyze the file based on its sweep type
+        sweep_type = check_sweep_type(file, OUTPUT_FILE)
+        df_file_stats, metrics_df = analyze_file(sweep_type, analysis_params)
 
-                # Generate the parameters using the helper function
-                analysis_params = generate_analysis_params(df, filename, base_dir, device)
+        # Save raw data and metrics to HDF5
+        save_to_hdf5(store, key_raw, key_metrics, df_file_stats, metrics_df)
 
-                # Call the appropriate analysis function based on the file type
-                if sweep_type == 'Iv_sweep':
-                    df_file_stats, metrics_df = file_analysis(**analysis_params)
-                elif sweep_type == 'Endurance':
-                    df_file_stats, metrics_df = file_analysis_endurance(**analysis_params)
-                elif sweep_type == 'Retention':
-                    df_file_stats, metrics_df = file_analysis_retention(**analysis_params)  # Assuming this exists
-                else:
-                    #df_file_stats, metrics_df = file_analysis_other(**analysis_params)  # For other file types
-                    pass
+        # Update the device metrics summary with new metrics
+        update_device_metrics_summary(device_metrics_summary, filename, device, section, sample, material, metrics_df)
 
-                if df_file_stats is not None and not df_file_stats.empty:
-                    # Add the raw data DataFrame to the HDF5 file
-                    key_raw = f'/{material}/{sample}/{section}/{device}/{filename}_raw'
-                    store.put(key_raw, df_file_stats)
-                    #print(f"Saved raw data for {filename} under {key_raw}")
+        # Track progress and print it
+        processed_files += 1
+        print_progress(processed_files, len(txt_files), PRINT_INTERVAL)
 
-                if metrics_df is not None and not metrics_df.empty:
-                    # Add the metrics DataFrame to the HDF5 file
-                    key_metrics = f'/{material}/{sample}/{section}/{device}/{filename}_metrics'
-                    store.put(key_metrics, metrics_df)
-                    #print(f"Saved metrics data for {filename} under {key_metrics}")
+    # Write the device-level summary after all files are processed
+    write_device_summary(device_metrics_summary, SUMMARY_FILE)
+    print(f"Processing complete: {processed_files}/{len(txt_files)} files processed.")
 
-                # Increment the processed files count
-                processed_files += 1
+# Extract file info (at depth 6)
+def extract_file_info(relative_path):
+    filename = relative_path.parts[-1]  # Depth 6 -> Filename
+    device = relative_path.parts[4]     # Depth 5 -> Device
+    section = relative_path.parts[3]    # Depth 4 -> Section
+    sample = relative_path.parts[2]     # Depth 3 -> Sample
+    material = relative_path.parts[1]   # Depth 2 -> Material
+    return filename, device, section, sample, material
 
-                # Print progress every X files
-                if processed_files % print_interval == 0:
-                    percent_completed = (zero_devision_check(processed_files,total_files)) * 100
-                    print(f"Processed {processed_files}/{total_files} files. {percent_completed:.2f}% done.")
+def main():
+    user_dir = Path.home()
+    base_dir = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Memristors")
+    txt_files = list(f for f in base_dir.rglob('*.txt') if len(f.relative_to(base_dir).parts) == 6)
 
-    # Final percentage after all files have been processed
-    percent_completed = (zero_devision_check(processed_files,total_files)) * 100
-    print(f"Processing complete: {processed_files}/{total_files} files. {percent_completed:.2f}% done.")
+    with pd.HDFStore('memristor_data.h5') as store:
+        process_files(txt_files, base_dir, store)
+
+if __name__ == '__main__':
+    main()

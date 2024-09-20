@@ -1,5 +1,6 @@
 import os
 import numpy as np
+from equations import zero_devision_check
 def split_iv_sweep(filepath):
     """ Read the IV sweep data from a file and return voltage and current arrays. """
     # Add your file reading logic here
@@ -134,3 +135,49 @@ def check_sweep_type(filepath, output_file):
         out_file.write(str(filepath) + '\n')  # Convert filepath to string
 
     return None
+
+def check_for_nan(df):
+    if df.isna().values.any():
+        print("File contains NaN values. Skipping...")
+        return True
+    return False
+
+def generate_analysis_params(df, filename, base_dir, device):
+    return {
+        'df': df,
+        'plot_graph': False,
+        'save_df': False,
+        'device_path': base_dir / device,
+        're_save_graph': False,
+        'short_name': filename,
+        'long_name': f"{filename}.csv"
+    }
+
+def extract_file_info(relative_path):
+    filename = relative_path.parts[-1]
+    device = relative_path.parts[4]
+    section = relative_path.parts[3]
+    sample = relative_path.parts[2]
+    material = relative_path.parts[1]
+    return filename, device, section, sample, material
+
+# Print progress every X files
+def print_progress(processed_files, total_files, interval):
+    if processed_files % interval == 0:
+        percent_completed = (zero_devision_check(processed_files, total_files)) * 100
+        print(f"Processed {processed_files}/{total_files} files. {percent_completed:.2f}% done.")
+
+# Check if a file already exists in the HDF5
+def check_if_file_exists(store, key):
+    try:
+        if store.get_storer(key) is not None:
+            return True
+    except KeyError:
+        return False
+    return False
+
+# Generate HDF5 keys for storing data
+def generate_hdf5_keys(material, sample, section, device, filename):
+    key_raw = f'/{material}/{sample}/{section}/{device}/{filename}_raw'
+    key_metrics = f'/{material}/{sample}/{section}/{device}/{filename}_metrics'
+    return key_raw, key_metrics
