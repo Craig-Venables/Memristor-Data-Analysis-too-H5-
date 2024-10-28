@@ -125,7 +125,12 @@ def handle_multiple_sweeps(df, num_sweeps, device_path, file_info, plot_graph, r
 
     # Plotting
     if plot_graph:
+        # plot all
+        plot_single_sweep_data(df, file_info, device_path, re_save_graph)
+        # plot individual here
         plot_loop_data(split_v_data, split_c_data, file_info, device_path, re_save_graph)
+
+
 
     return file_stats, None, df_file_stats
 
