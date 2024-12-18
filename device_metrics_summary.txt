@@ -1,0 +1,42 @@
+Material: Zn-Cu-In-S(Zns)
+Sample: D65-0.05mgml-ITO-PMMA(3%)-Gold-s5
+Section: G
+Device: 10
+Total Files Processed: 48
+Total Sweeps: 48
+--- Metrics Summary ---
+   voltage       current   abs_current    resistance  voltage_ps    current_ps  voltage_ng    current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng
+0     0.00  7.868000e-12  7.868000e-12  0.000000e+00        0.00  7.868000e-12         0.0  7.868000e-12        0.000000    7.868000e-12    7.868000e-12              0.0000                 0.0                0.0                0.0           0.000000e+00                    0.0         0.000000              0.0
+1     0.05  1.132000e-09  1.132000e-09  4.416961e+07        0.05  1.132000e-09         0.0  0.000000e+00       17.603548    1.132000e-09    0.000000e+00              0.1132                 0.0           500000.0                0.0           2.264000e-08                    0.0         0.223607              0.0
+2     0.10  2.595000e-09  2.595000e-09  3.853565e+07        0.10  2.595000e-09         0.0  0.000000e+00       17.467094    2.595000e-09    0.000000e+00              0.2595                 0.0          1000000.0                0.0           2.595000e-08                    0.0         0.316228              0.0
+3     0.15  4.609000e-09  4.609000e-09  3.254502e+07        0.15  4.609000e-09         0.0  0.000000e+00       17.298135    4.609000e-09    0.000000e+00              0.4609                 0.0          1500000.0                0.0           3.072667e-08                    0.0         0.387298              0.0
+4     0.20  7.258000e-09  7.258000e-09  2.755580e+07        0.20  7.258000e-09         0.0  0.000000e+00       17.131724    7.258000e-09    0.000000e+00              0.7258                 0.0          2000000.0                0.0           3.629000e-08                    0.0         0.447214              0.0
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D65-0.05mgml-ITO-PMMA(3%)-Gold-s5
+Section: G
+Device: 8
+Total Files Processed: 1
+Total Sweeps: 1
+--- Metrics Summary ---
+   voltage       current   abs_current    resistance  voltage_ps    current_ps  voltage_ng    current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng
+0     0.00  1.150000e-11  1.150000e-11  0.000000e+00        0.00  1.150000e-11         0.0  1.150000e-11        0.000000    1.150000e-11    1.150000e-11            0.000000                 0.0                0.0                0.0           0.000000e+00                    0.0         0.000000              0.0
+1     0.05  1.325000e-11  1.325000e-11  3.773585e+09        0.05  1.325000e-11         0.0  0.000000e+00       22.051291    1.325000e-11    0.000000e+00            0.001325                 0.0           500000.0                0.0           2.650000e-10                    0.0         0.223607              0.0
+2     0.10  1.344000e-11  1.344000e-11  7.440476e+09        0.10  1.344000e-11         0.0  0.000000e+00       22.730201    1.344000e-11    0.000000e+00            0.001344                 0.0          1000000.0                0.0           1.344000e-10                    0.0         0.316228              0.0
+3     0.15  1.517000e-11  1.517000e-11  9.887937e+09        0.15  1.517000e-11         0.0  0.000000e+00       23.014581    1.517000e-11    0.000000e+00            0.001517                 0.0          1500000.0                0.0           1.011333e-10                    0.0         0.387298              0.0
+4     0.20  1.541000e-11  1.541000e-11  1.297859e+10        0.20  1.541000e-11         0.0  0.000000e+00       23.286567    1.541000e-11    0.000000e+00            0.001541                 0.0          2000000.0                0.0           7.705000e-11                    0.0         0.447214              0.0
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D65-0.05mgml-ITO-PMMA(3%)-Gold-s5
+Section: G
+Device: 9
+Total Files Processed: 1
+Total Sweeps: 1
+--- Metrics Summary ---
+   voltage       current   abs_current    resistance  voltage_ps    current_ps  voltage_ng    current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng
+0     0.00  1.257000e-11  1.257000e-11  0.000000e+00        0.00  1.257000e-11         0.0  1.257000e-11        0.000000    1.257000e-11    1.257000e-11            0.000000                 0.0                0.0                0.0           0.000000e+00                    0.0         0.000000              0.0
+1     0.05  1.423000e-11  1.423000e-11  3.513703e+09        0.05  1.423000e-11         0.0  0.000000e+00       21.979936    1.423000e-11    0.000000e+00            0.001423                 0.0           500000.0                0.0           2.846000e-10                    0.0         0.223607              0.0
+2     0.10  1.577000e-11  1.577000e-11  6.341154e+09        0.10  1.577000e-11         0.0  0.000000e+00       22.570327    1.577000e-11    0.000000e+00            0.001577                 0.0          1000000.0                0.0           1.577000e-10                    0.0         0.316228              0.0
+3     0.15  1.574000e-11  1.574000e-11  9.529860e+09        0.15  1.574000e-11         0.0  0.000000e+00       22.977696    1.574000e-11    0.000000e+00            0.001574                 0.0          1500000.0                0.0           1.049333e-10                    0.0         0.387298              0.0
+4     0.20  1.593000e-11  1.593000e-11  1.255493e+10        0.20  1.593000e-11         0.0  0.000000e+00       23.253379    1.593000e-11    0.000000e+00            0.001593                 0.0          2000000.0                0.0           7.965000e-11                    0.0         0.447214              0.0
+

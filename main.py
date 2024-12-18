@@ -11,7 +11,7 @@ import warnings
 
 # what should the code do
 calculate_raw = True  # All raw files
-calculate_currated = True # Statistical analysis on curated files.
+calculate_currated = False # Statistical analysis on curated files.
 
 # Constants for configuration
 FORCE_RECALCULATE = True  # Set to True to force recalculation and overwrite existing data in HDF5
@@ -24,7 +24,7 @@ SUMMARY_FILE_Currated = "device_metrics_summary_Currated.txt"  # File to store t
 # paths
 user_dir = Path.home()
 base_dir = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Memristors")
-base_currated = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Memristors")
+base_currated = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Curated Data")
 
 warnings.filterwarnings('ignore', category=NaturalNameWarning)
 skipped_files2 = []
@@ -103,6 +103,12 @@ def process_files_currated(txt_files, base_dir, store):
 
     print("working on currated data")
 
+    # is there a way too take all the currated data and pull it from the h5 file
+    # currate data is displayed as follows in files
+    # name_in_checked_files = f"{self.material} - {self.polymer} - {self.sample_name} - {self.section_folder} - {self.device_folder} - {self.filename}"
+    # with folder structure like this
+    # output_folder2 = os.path.join(self.output_folder, self.material, self.polymer, self.sample_name
+
     for i, file in enumerate(txt_files, 1):
         relative_path = file.relative_to(base_dir)
         depth = len(relative_path.parts)
@@ -110,10 +116,11 @@ def process_files_currated(txt_files, base_dir, store):
         if depth != 6:
             continue
 
-        # Extract file information
+
+        # Extract file information this needs changing to extract the relavent information
         filename, device, section, sample, material = extract_file_info(relative_path)
 
-        # Generate keys for HDF5 storage
+        # Generate keys for HDF5_curated storage, again names need changing or checking. keep it the same format as normal
         key_raw, key_metrics = generate_hdf5_keys(material, sample, section, device, filename)
 
         # Check if the file exists in HDF5 and skip if necessary
@@ -175,15 +182,14 @@ def extract_file_info(relative_path):
 
 def main(base_dir,base_currated,calculate_raw,calculate_currated):
     # Set the working directory to the user's home directory'
-    user_dir = Path.home()
 
     txt_files_base = list(f for f in base_dir.rglob('*.txt') if len(f.relative_to(base_dir).parts) == 6)
     txt_files_curr = list(f for f in base_currated.rglob('*.txt') if len(f.relative_to(base_currated).parts) == 6)
 
     if calculate_raw:
-    # Process all raw files
-    with pd.HDFStore('memristor_data.h5') as store:
-        process_files_raw(txt_files_base, base_dir, store)
+        # Process all raw files
+        with pd.HDFStore('memristor_data.h5') as store:
+            process_files_raw(txt_files_base, base_dir, store)
 
     if calculate_currated:
         # process currated files
