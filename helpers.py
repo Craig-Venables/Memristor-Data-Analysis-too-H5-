@@ -178,6 +178,6 @@ def check_if_file_exists(store, key):
 
 # Generate HDF5 keys for storing data
 def generate_hdf5_keys(material, sample, section, device, filename):
-    key_raw = f'/{material}/{sample}/{section}/{device}/{filename}_raw'
+    key_info = f'/{material}/{sample}/{section}/{device}/{filename}_info'
     key_metrics = f'/{material}/{sample}/{section}/{device}/{filename}_metrics'
-    return key_raw, key_metrics
+    return key_info, key_metrics

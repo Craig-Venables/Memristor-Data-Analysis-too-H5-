@@ -2,8 +2,8 @@ Material: Zn-Cu-In-S(Zns)
 Sample: D65-0.05mgml-ITO-PMMA(3%)-Gold-s5
 Section: G
 Device: 10
-Total Files Processed: 48
-Total Sweeps: 48
+Total Files Processed: 20
+Total Sweeps: 20
 --- Metrics Summary ---
    voltage       current   abs_current    resistance  voltage_ps    current_ps  voltage_ng    current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng
 0     0.00  7.868000e-12  7.868000e-12  0.000000e+00        0.00  7.868000e-12         0.0  7.868000e-12        0.000000    7.868000e-12    7.868000e-12              0.0000                 0.0                0.0                0.0           0.000000e+00                    0.0         0.000000              0.0
@@ -16,8 +16,8 @@ Material: Zn-Cu-In-S(Zns)
 Sample: D65-0.05mgml-ITO-PMMA(3%)-Gold-s5
 Section: G
 Device: 8
-Total Files Processed: 1
-Total Sweeps: 1
+Total Files Processed: 2
+Total Sweeps: 2
 --- Metrics Summary ---
    voltage       current   abs_current    resistance  voltage_ps    current_ps  voltage_ng    current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng
 0     0.00  1.150000e-11  1.150000e-11  0.000000e+00        0.00  1.150000e-11         0.0  1.150000e-11        0.000000    1.150000e-11    1.150000e-11            0.000000                 0.0                0.0                0.0           0.000000e+00                    0.0         0.000000              0.0
@@ -30,8 +30,8 @@ Material: Zn-Cu-In-S(Zns)
 Sample: D65-0.05mgml-ITO-PMMA(3%)-Gold-s5
 Section: G
 Device: 9
-Total Files Processed: 1
-Total Sweeps: 1
+Total Files Processed: 2
+Total Sweeps: 2
 --- Metrics Summary ---
    voltage       current   abs_current    resistance  voltage_ps    current_ps  voltage_ng    current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng
 0     0.00  1.257000e-11  1.257000e-11  0.000000e+00        0.00  1.257000e-11         0.0  1.257000e-11        0.000000    1.257000e-11    1.257000e-11            0.000000                 0.0                0.0                0.0           0.000000e+00                    0.0         0.000000              0.0

@@ -47,10 +47,10 @@ def process_files_raw(txt_files, base_dir, store):
         filename, device, section, sample, material = extract_file_info(relative_path)
 
         # Generate keys for HDF5 storage
-        key_raw, key_metrics = generate_hdf5_keys(material, sample, section, device, filename)
+        key_info, key_metrics = generate_hdf5_keys(material, sample, section, device, filename)
 
         # Check if the file exists in HDF5 and skip if necessary
-        if not FORCE_RECALCULATE and check_if_file_exists(store, key_raw):
+        if not FORCE_RECALCULATE and check_if_file_exists(store, key_info):
             print(f"File {filename} already exists in HDF5. Skipping...")
             continue
 
@@ -76,7 +76,9 @@ def process_files_raw(txt_files, base_dir, store):
         df_file_stats, metrics_df = analyze_file(sweep_type, analysis_params)
 
         # Save raw data and metrics to HDF5
-        save_to_hdf5(store, key_raw, key_metrics, df_file_stats, metrics_df)
+        save_to_hdf5(store, key_info, key_metrics, df_file_stats, metrics_df)
+        print(key_metrics)
+        print(key_info)
 
         # Update the device metrics summary with new metrics
         update_device_metrics_summary(device_metrics_summary, filename, device, section, sample, material, metrics_df)
@@ -86,6 +88,7 @@ def process_files_raw(txt_files, base_dir, store):
         print_progress(processed_files, len(txt_files), PRINT_INTERVAL)
 
     # Write the device-level summary after all files are processed
+    # this currently saves at the location of the code!!
     write_device_summary(device_metrics_summary, SUMMARY_FILE)
 
     misssing_number = len(txt_files) - processed_files
@@ -151,6 +154,7 @@ def process_files_currated(txt_files, base_dir, store):
 
         # Save raw data and metrics to HDF5
         save_to_hdf5(store, key_raw, key_metrics, df_file_stats, metrics_df)
+        print(key_raw)
 
         # Update the device metrics summary with new metrics
         update_device_metrics_summary(device_metrics_summary, filename, device, section, sample, material, metrics_df)

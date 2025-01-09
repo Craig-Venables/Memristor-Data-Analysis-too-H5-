@@ -195,6 +195,8 @@ def analyze_file(sweep_type, analysis_params):
 
 # Save raw data and metrics to HDF5
 def save_to_hdf5(store, key_raw, key_metrics, df_file_stats, metrics_df):
+    # print("key_metrics" , key_metrics)
+    # print("key_raw",key_raw)
     if df_file_stats is not None and not df_file_stats.empty:
         store.put(key_raw, df_file_stats)
     if metrics_df is not None and not metrics_df.empty:

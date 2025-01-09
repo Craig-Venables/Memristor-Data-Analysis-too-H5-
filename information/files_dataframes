@@ -1,0 +1,5 @@
+Columns in the DataFrame:
+['ps_area', 'ng_area', 'area', 'normalized_area', 'resistance_on_value', 'resistance_off_value', 'ON_OFF_Ratio', 'voltage_on_value', 'voltage_off_value']
+
+Columns in the DataFrame:
+['voltage', 'current', 'abs_current', 'resistance', 'voltage_ps', 'current_ps', 'voltage_ng', 'current_ng', 'log_Resistance', 'abs_Current_ps', 'abs_Current_ng', 'current_Density_ps', 'current_Density_ng', 'electric_field_ps', 'electric_field_ng', 'inverse_resistance_ps', 'inverse_resistance_ng', 'sqrt_Voltage_ps', 'sqrt_Voltage_ng']
