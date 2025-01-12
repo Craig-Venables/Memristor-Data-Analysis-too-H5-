@@ -2,3 +2,5 @@ C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Desktop\Origin Te
 C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Stock\PVA\D16-0.1mgml-Gold-PVA(2%)-Gold-s9\F 100µm\10\1-FS_0.5v_0.01s.txt
 C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Stock\PVA\D16-0.1mgml-Gold-PVA(2%)-Gold-s9\F 100µm\10\1-FS_0.5v_0.01s.txt
 C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Stock\PVA\D16-0.1mgml-Gold-PVA(2%)-Gold-s9\F 100µm\10\1-FS_0.5v_0.01s.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\G\3\7-Fs_2v_0.1s.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\G\3\7-Fs_2v_0.1s.txt

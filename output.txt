@@ -1,0 +1,87 @@
+C:\Users\Craig-Desktop\.virtualenvs\Sample_Stats_grpahing\Scripts\python.exe "C:\Users\Craig-Desktop\Documents\GitHub\pythonProject\Sample_Stats_grpahing\h5 stuff\analyze_hd5.py"
+Device Number: D75, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 3, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D75-0.2mgml-Gold-PMMA(3%)-Gold-s6/G/2/1-fs-0.5v-0.05v-100na.txt_metrics: 339.4932481941875
+Device Number: D75, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 3, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D75-0.2mgml-Gold-PMMA(3%)-Gold-s6/G/1/1-fs-0.5v-0.05sv-100na.txt_metrics: 18194.147347940998
+Device Number: D65, Concentration: 0.05, Bottom Electrode: ITO, Polymer: PMMA, Polymer Percent: 3, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D65-0.05mgml-ITO-PMMA(3%)-Gold-s5/H/9/1-fs-1v-0.05sv-100na.txt_metrics: 4325581349.454067
+Device Number: D65, Concentration: 0.05, Bottom Electrode: ITO, Polymer: PMMA, Polymer Percent: 3, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D65-0.05mgml-ITO-PMMA(3%)-Gold-s5/H/8/1-fs-1v-0.05sv-100na.txt_metrics: 4850405383.028676
+Device Number: D65, Concentration: 0.05, Bottom Electrode: ITO, Polymer: PMMA, Polymer Percent: 3, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D65-0.05mgml-ITO-PMMA(3%)-Gold-s5/H/10/1-fs-1v-0.05sv-100na.txt_metrics: 14877497.87316606
+Device Number: D65, Concentration: 0.05, Bottom Electrode: ITO, Polymer: PMMA, Polymer Percent: 3, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D65-0.05mgml-ITO-PMMA(3%)-Gold-s5/G/9/1-fs-1v-0.05sv-100na.txt_metrics: 4325581349.454067
+Device Number: D65, Concentration: 0.05, Bottom Electrode: ITO, Polymer: PMMA, Polymer Percent: 3, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D65-0.05mgml-ITO-PMMA(3%)-Gold-s5/G/8/1-fs-1v-0.05sv-100na.txt_metrics: 4850405383.028676
+Device Number: D65, Concentration: 0.05, Bottom Electrode: ITO, Polymer: PMMA, Polymer Percent: 3, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D65-0.05mgml-ITO-PMMA(3%)-Gold-s5/G/10/1-fs-1v-0.05sv-100na.txt_metrics: 14877497.87316606
+Device Number: D59, Concentration: 0.05, Bottom Electrode: ITO, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D59-0.05mgml-ITO-PMMA(2%)-Gold-s8/G/3/1-fs-0.5sv-0.05va-100na.txt_metrics: 10249139354.103062
+Device Number: D59, Concentration: 0.05, Bottom Electrode: ITO, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D59-0.05mgml-ITO-PMMA(2%)-Gold-s8/G/2/1-fs-1v-0.05sv-100na.txt_metrics: 18234993.10882727
+Device Number: D59, Concentration: 0.05, Bottom Electrode: ITO, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D59-0.05mgml-ITO-PMMA(2%)-Gold-s8/G/1/1-fs-1v-0.05sv-100na.txt_metrics: 7090213.01539714
+Device Number: D30, Concentration: 0.07, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D30-0.07mgml-Gold-PMMA(2%)-Gold-s1/F/3/1-FS-2V-0.05va-100na.txt_metrics: 27.658821343680945
+Device Number: D30, Concentration: 0.07, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D30-0.07mgml-Gold-PMMA(2%)-Gold-s1/F/2/1-FS-2V-0.05va-100na.txt_metrics: 21700315417.59384
+Device Number: D30, Concentration: 0.07, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D30-0.07mgml-Gold-PMMA(2%)-Gold-s1/F/1/1-FS-1V-0.05va-100na.txt_metrics: 22533386080.553493
+Device Number: D13, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PS, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D13-0.2mgml-Gold-PS(2%)-Gold-s6/G/1/1-FS_0.5v_0.01s.txt_metrics: 79.67380770546029
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/9/1-FS-1V-0.01sv.txt_metrics: 12.025849273933105
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/8/1-FS-1V-0.01SV.txt_metrics: 13.79679334604913
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/7/1-Fs_0.8v_0.01s.txt_metrics: 13.898012710201852
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/6/1-Fs_0.8v_0.01s.txt_metrics: 509089049.9899554
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/5/1-Fs_0.8v_0.01s.txt_metrics: 12.417516200339639
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/4/1-Fs_0.8v_0.01s.txt_metrics: 11.304270089299262
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/3/1-Fs_0.8v_0.01s.txt_metrics: 9.83648518174842
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/2/1-Fs_0.7v_0.01s.txt_metrics: 9.147224942898328
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/10/1-FS-1V-0.01sv.txt_metrics: 9.29933912817926
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/1/1-Fs_0.3v_0.01s.txt_metrics: 11.965473710484074
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/9/1-FS-0.8V-0.05VA.txt_metrics: 9.932708617138996
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/9/1-FS-1V-0.05VA.txt_metrics: 12.499956988089712
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/8/1-FS-1V-0.05VA.txt_metrics: -48264391.09308128
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/7/1-FS-1V-0.05VA.txt_metrics: 13.545313391015116
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/6/1-FS-0.8V-0.05VA.txt_metrics: -22340864499.556843
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/5/1-FS-0.8V-0..txt_metrics: -2917879139.3465805
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/4/1-fs-0.8v-0.05sv.txt_metrics: -51281860.85758495
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/3/1-fs-1v-0.05sv.txt_metrics: 14.79620044149006
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/2/1-FS-1V-0.01SV.txt_metrics: 38772573.08572797
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/10/1-FS-1.8V-0.05VA.txt_metrics: 101823497150.10178
+Device Number: D10, Concentration: 0.2, Bottom Electrode: Gold, Polymer: PMMA, Polymer Percent: 2, Top Electrode: Gold
+Calculated Average Resistance for key /Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/F/1/1-FS-1V-0.01SV.txt_metrics: 36688180.412216045
+
+Device D10: Average Resistance: 3669036057.9619393, Max Resistance: 101823497150.10178, Min Resistance: -22340864499.556843, Spread: 62082180824.82931
+
+Device D13: Average Resistance: 79.67380770546029, Max Resistance: 79.67380770546029, Min Resistance: 79.67380770546029, Spread: 0.0
+
+Device D30: Average Resistance: 14744567175.268717, Max Resistance: 22533386080.553493, Min Resistance: 27.658821343680945, Spread: 11266693026.447336
+
+Device D59: Average Resistance: 3424821520.0757623, Max Resistance: 10249139354.103062, Min Resistance: 7090213.01539714, Spread: 5121024570.543832
+
+Device D65: Average Resistance: 3063621410.1186357, Max Resistance: 4850405383.028676, Min Resistance: 14877497.87316606, Spread: 2417763942.577755
+
+Device D75: Average Resistance: 9266.820298067592, Max Resistance: 18194.147347940998, Min Resistance: 339.4932481941875, Spread: 8927.327049873405
+
+Process finished with exit code 0
