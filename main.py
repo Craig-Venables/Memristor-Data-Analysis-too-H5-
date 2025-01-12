@@ -95,7 +95,7 @@ def process_files_raw(txt_files, base_dir, store):
 
     print(
         f"Processing complete: {processed_files}/{len(txt_files)} files processed, with {misssing_number} files missing:")
-    print("")
+    print(" ")
     for file in skipped_files2:
         print(file)
 

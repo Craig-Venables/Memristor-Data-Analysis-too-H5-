@@ -12,6 +12,7 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
         # Analyze data at the lowest level (depth 6)
         all_first_sweeps = []
         for key in grouped_keys[5]:
+            # anlysis at the file level
             first_sweep_data = analyze_at_file_level(key, store, dataframe_type)
             if first_sweep_data is not None:
                 all_first_sweeps.append(first_sweep_data)
