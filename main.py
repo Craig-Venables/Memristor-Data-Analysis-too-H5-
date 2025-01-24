@@ -152,6 +152,11 @@ def process_files_currated(txt_files, base_dir, store):
         sweep_type = check_sweep_type(file, OUTPUT_FILE_Currated)
         df_file_stats, metrics_df = analyze_file(sweep_type, analysis_params)
 
+        # look at excell file here
+        # check the file and load it in before doing the bellow passing the dataframe to it
+        #save_info_from_solution_devices_excell(device_name, excel_path)
+        # append the classification given to the end of the dataframe for the device
+
         # Save raw data and metrics to HDF5
         save_to_hdf5(store, key_raw, key_metrics, df_file_stats, metrics_df)
         print(key_raw)

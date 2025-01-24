@@ -26,14 +26,6 @@ def file_analysis(df, plot_graph, save_df, device_path, re_save_graph, short_nam
     metrics_df = create_device_dataframe(v_data, c_data, v_data_ps, c_data_ps, v_data_ng, c_data_ng)
 
 
-    # Debug: Print the metrics DataFrame for verification
-
-    # print("\nColumns in the Metrics DataFrame:")
-    # print(metrics_df.columns.tolist())  # Print all column names
-    #
-    # print("\nFirst few rows of the Metrics DataFrame:")
-    # print(metrics_df.head())  # Display the first few rows of the dataset
-
 
     # Step 4: Handle single or multiple sweeps
     if num_sweeps > 1:

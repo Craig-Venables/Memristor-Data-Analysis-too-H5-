@@ -55,6 +55,8 @@ def initial_resistance(data):
         # Print calculated resistance for debugging
         print(f"Calculated Average Resistance for key {key}: {resistance}")
 
+        classification = "placeholder"
+
         # Store results
         resistance_results.append({
             'device_number': device_number,
@@ -63,7 +65,8 @@ def initial_resistance(data):
             'polymer': polymer,
             'polymer_percent': polymer_percent,
             'top_electrode': top_e,
-            'average_resistance': resistance
+            'average_resistance': resistance,
+            'classification': classification
         })
 
     resistance_df = pd.DataFrame(resistance_results)
@@ -94,8 +97,9 @@ def initial_resistance(data):
 
     # Plot results
     device_stats_df = pd.DataFrame(device_stats)
-    #print("\nDevice Stats DataFrame:")
-    #print(device_stats_df)
+    device_stats_df.to_csv("Average_resistance_device_0.1v.csv", index=False)
+    resistance_df.to_csv("resistance_grouped_by_device_0.1v.csv", index=False)
+
 
     plt.figure(figsize=(10, 6))
     plt.errorbar(
