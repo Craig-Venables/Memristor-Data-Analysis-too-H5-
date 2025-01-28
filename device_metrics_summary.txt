@@ -1,0 +1,140 @@
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: G
+Device: 1
+Total Files Processed: 32
+Total Sweeps: 32
+--- Metrics Summary ---
+   voltage   current  abs_current  resistance  voltage_ps  current_ps  voltage_ng  current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng classification
+0    0.000 -0.000009     0.000009   -0.000000       0.000   -0.000009         0.0    0.000009        0.000000        0.000009        0.000009                 0.0                 0.0                0.0                0.0               0.000000                    0.0         0.000000              0.0          Ohmic
+1    0.001  0.000012     0.000012   80.775444       0.001    0.000012         0.0    0.000000        4.391673        0.000012        0.000000              1238.0                 0.0            10000.0                0.0               0.012380                    0.0         0.031623              0.0          Ohmic
+2    0.002  0.000033     0.000033   59.880240       0.002    0.000033         0.0    0.000000        4.092347        0.000033        0.000000              3340.0                 0.0            20000.0                0.0               0.016700                    0.0         0.044721              0.0          Ohmic
+3    0.003  0.000200     0.000200   14.962594       0.003    0.000200         0.0    0.000000        2.705553        0.000200        0.000000             20050.0                 0.0            30000.0                0.0               0.066833                    0.0         0.054772              0.0          Ohmic
+4    0.004  0.000262     0.000262   15.238095       0.004    0.000262         0.0    0.000000        2.723799        0.000262        0.000000             26250.0                 0.0            40000.0                0.0               0.065625                    0.0         0.063246              0.0          Ohmic
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: G
+Device: 10
+Total Files Processed: 22
+Total Sweeps: 22
+--- Metrics Summary ---
+   voltage   current  abs_current  resistance  voltage_ps  current_ps  voltage_ng  current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng classification
+0     0.00 -0.000010     0.000010   -0.000000        0.00   -0.000010         0.0     0.00001        0.000000        0.000010         0.00001                 0.0                 0.0                0.0                0.0               0.000000                    0.0         0.000000              0.0          Ohmic
+1     0.01  0.000924     0.000924   10.821340        0.01    0.000924         0.0     0.00000        2.381520        0.000924         0.00000             92410.0                 0.0           100000.0                0.0               0.092410                    0.0         0.100000              0.0          Ohmic
+2     0.02  0.001863     0.001863   10.735373        0.02    0.001863         0.0     0.00000        2.373544        0.001863         0.00000            186300.0                 0.0           200000.0                0.0               0.093150                    0.0         0.141421              0.0          Ohmic
+3     0.03  0.002804     0.002804   10.699001        0.03    0.002804         0.0     0.00000        2.370150        0.002804         0.00000            280400.0                 0.0           300000.0                0.0               0.093467                    0.0         0.173205              0.0          Ohmic
+4     0.04  0.003746     0.003746   10.678057        0.04    0.003746         0.0     0.00000        2.368191        0.003746         0.00000            374600.0                 0.0           400000.0                0.0               0.093650                    0.0         0.200000              0.0          Ohmic
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: G
+Device: 2
+Total Files Processed: 34
+Total Sweeps: 34
+--- Metrics Summary ---
+   voltage   current  abs_current  resistance  voltage_ps  current_ps  voltage_ng  current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng classification
+0     0.00  0.000011     0.000011    0.000000        0.00    0.000011         0.0    0.000011        0.000000        0.000011        0.000011                 0.0                 0.0                0.0                0.0               0.000000                    0.0         0.000000              0.0          Ohmic
+1     0.01  0.000968     0.000968   10.332713        0.01    0.000968         0.0    0.000000        2.335315        0.000968        0.000000             96780.0                 0.0           100000.0                0.0               0.096780                    0.0         0.100000              0.0          Ohmic
+2     0.02  0.001913     0.001913   10.454783        0.02    0.001913         0.0    0.000000        2.347060        0.001913        0.000000            191300.0                 0.0           200000.0                0.0               0.095650                    0.0         0.141421              0.0          Ohmic
+3     0.03  0.002865     0.002865   10.471204        0.03    0.002865         0.0    0.000000        2.348629        0.002865        0.000000            286500.0                 0.0           300000.0                0.0               0.095500                    0.0         0.173205              0.0          Ohmic
+4     0.04  0.003817     0.003817   10.479434        0.04    0.003817         0.0    0.000000        2.349415        0.003817        0.000000            381700.0                 0.0           400000.0                0.0               0.095425                    0.0         0.200000              0.0          Ohmic
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: G
+Device: 3
+Total Files Processed: 13
+Total Sweeps: 13
+--- Metrics Summary ---
+   voltage   current  abs_current  resistance  voltage_ps  current_ps  voltage_ng  current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng classification
+0     0.00  0.000010     0.000010    0.000000        0.00    0.000010         0.0     0.00001        0.000000        0.000010         0.00001                 0.0                 0.0                0.0                0.0               0.000000                    0.0         0.000000              0.0     Capacative
+1     0.01  0.000874     0.000874   11.444266        0.01    0.000874         0.0     0.00000        2.437489        0.000874         0.00000             87380.0                 0.0           100000.0                0.0               0.087380                    0.0         0.100000              0.0     Capacative
+2     0.02  0.001730     0.001730   11.560694        0.02    0.001730         0.0     0.00000        2.447611        0.001730         0.00000            173000.0                 0.0           200000.0                0.0               0.086500                    0.0         0.141421              0.0     Capacative
+3     0.03  0.002591     0.002591   11.578541        0.03    0.002591         0.0     0.00000        2.449153        0.002591         0.00000            259100.0                 0.0           300000.0                0.0               0.086367                    0.0         0.173205              0.0     Capacative
+4     0.04  0.003452     0.003452   11.587486        0.04    0.003452         0.0     0.00000        2.449926        0.003452         0.00000            345200.0                 0.0           400000.0                0.0               0.086300                    0.0         0.200000              0.0     Capacative
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: G
+Device: 4
+Total Files Processed: 23
+Total Sweeps: 23
+--- Metrics Summary ---
+   voltage   current  abs_current  resistance  voltage_ps  current_ps  voltage_ng  current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng classification
+0     0.00  0.000009     0.000009    0.000000        0.00    0.000009         0.0    0.000009        0.000000        0.000009        0.000009                 0.0                 0.0                0.0                0.0                0.00000                    0.0         0.000000              0.0     Memristive
+1     0.01  0.000769     0.000769   13.003901        0.01    0.000769         0.0    0.000000        2.565249        0.000769        0.000000             76900.0                 0.0           100000.0                0.0                0.07690                    0.0         0.100000              0.0     Memristive
+2     0.02  0.001523     0.001523   13.131976        0.02    0.001523         0.0    0.000000        2.575050        0.001523        0.000000            152300.0                 0.0           200000.0                0.0                0.07615                    0.0         0.141421              0.0     Memristive
+3     0.03  0.002280     0.002280   13.157895        0.03    0.002280         0.0    0.000000        2.577022        0.002280        0.000000            228000.0                 0.0           300000.0                0.0                0.07600                    0.0         0.173205              0.0     Memristive
+4     0.04  0.003038     0.003038   13.166557        0.04    0.003038         0.0    0.000000        2.577680        0.003038        0.000000            303800.0                 0.0           400000.0                0.0                0.07595                    0.0         0.200000              0.0     Memristive
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: G
+Device: 5
+Total Files Processed: 16
+Total Sweeps: 16
+--- Metrics Summary ---
+   voltage   current  abs_current  resistance  voltage_ps  current_ps  voltage_ng  current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng classification
+0     0.00  0.000005     0.000005    0.000000        0.00    0.000005         0.0    0.000005        0.000000        0.000005        0.000005                 0.0                 0.0                0.0                0.0                0.00000                    0.0         0.000000              0.0     Memristive
+1     0.01  0.000709     0.000709   14.108352        0.01    0.000709         0.0    0.000000        2.646767        0.000709        0.000000             70880.0                 0.0           100000.0                0.0                0.07088                    0.0         0.100000              0.0     Memristive
+2     0.02  0.001404     0.001404   14.245014        0.02    0.001404         0.0    0.000000        2.656407        0.001404        0.000000            140400.0                 0.0           200000.0                0.0                0.07020                    0.0         0.141421              0.0     Memristive
+3     0.03  0.002103     0.002103   14.265335        0.03    0.002103         0.0    0.000000        2.657832        0.002103        0.000000            210300.0                 0.0           300000.0                0.0                0.07010                    0.0         0.173205              0.0     Memristive
+4     0.04  0.002802     0.002802   14.275517        0.04    0.002802         0.0    0.000000        2.658546        0.002802        0.000000            280200.0                 0.0           400000.0                0.0                0.07005                    0.0         0.200000              0.0     Memristive
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: G
+Device: 6
+Total Files Processed: 1
+Total Sweeps: 1
+--- Metrics Summary ---
+   voltage       current   abs_current    resistance  voltage_ps    current_ps  voltage_ng    current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng  classification
+0     0.00 -9.231000e-12  9.231000e-12 -0.000000e+00        0.00 -9.231000e-12         0.0  9.231000e-12        0.000000    9.231000e-12    9.231000e-12            0.000000                 0.0                0.0                0.0           0.000000e+00                    0.0         0.000000              0.0  Non-Conductive
+1     0.01  1.295000e-11  1.295000e-11  7.722008e+08        0.01  1.295000e-11         0.0  0.000000e+00       20.464755    1.295000e-11    0.000000e+00            0.001295                 0.0           100000.0                0.0           1.295000e-09                    0.0         0.100000              0.0  Non-Conductive
+2     0.02 -2.561000e-11  2.561000e-11 -7.809449e+08        0.02 -2.561000e-11         0.0  0.000000e+00       20.476015    2.561000e-11    0.000000e+00           -0.002561                 0.0           200000.0                0.0          -1.280500e-09                    0.0         0.141421              0.0  Non-Conductive
+3     0.03 -2.176000e-11  2.176000e-11 -1.378676e+09        0.03 -2.176000e-11         0.0  0.000000e+00       21.044390    2.176000e-11    0.000000e+00           -0.002176                 0.0           300000.0                0.0          -7.253333e-10                    0.0         0.173205              0.0  Non-Conductive
+4     0.04  2.807000e-11  2.807000e-11  1.425009e+09        0.04  2.807000e-11         0.0  0.000000e+00       21.077444    2.807000e-11    0.000000e+00            0.002807                 0.0           400000.0                0.0           7.017500e-10                    0.0         0.200000              0.0  Non-Conductive
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: G
+Device: 7
+Total Files Processed: 4
+Total Sweeps: 4
+--- Metrics Summary ---
+   voltage   current  abs_current  resistance  voltage_ps  current_ps  voltage_ng  current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng classification
+0     0.00  0.000005     0.000005    0.000000        0.00    0.000005         0.0    0.000005        0.000000        0.000005        0.000005                 0.0                 0.0                0.0                0.0               0.000000                    0.0         0.000000              0.0          Ohmic
+1     0.01  0.000633     0.000633   15.795293        0.01    0.000633         0.0    0.000000        2.759712        0.000633        0.000000             63310.0                 0.0           100000.0                0.0               0.063310                    0.0         0.100000              0.0          Ohmic
+2     0.02  0.001254     0.001254   15.948963        0.02    0.001254         0.0    0.000000        2.769394        0.001254        0.000000            125400.0                 0.0           200000.0                0.0               0.062700                    0.0         0.141421              0.0          Ohmic
+3     0.03  0.001879     0.001879   15.965939        0.03    0.001879         0.0    0.000000        2.770458        0.001879        0.000000            187900.0                 0.0           300000.0                0.0               0.062633                    0.0         0.173205              0.0          Ohmic
+4     0.04  0.002503     0.002503   15.980823        0.04    0.002503         0.0    0.000000        2.771389        0.002503        0.000000            250300.0                 0.0           400000.0                0.0               0.062575                    0.0         0.200000              0.0          Ohmic
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: G
+Device: 8
+Total Files Processed: 10
+Total Sweeps: 10
+--- Metrics Summary ---
+   voltage   current  abs_current  resistance  voltage_ps  current_ps  voltage_ng  current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng classification
+0     0.00 -0.000008     0.000008   -0.000000        0.00   -0.000008         0.0    0.000008        0.000000        0.000008        0.000008                 0.0                 0.0                0.0                0.0               0.000000                    0.0         0.000000              0.0          Ohmic
+1     0.01  0.000619     0.000619   16.162922        0.01    0.000619         0.0    0.000000        2.782720        0.000619        0.000000             61870.0                 0.0           100000.0                0.0               0.061870                    0.0         0.100000              0.0          Ohmic
+2     0.02  0.001249     0.001249   16.012810        0.02    0.001249         0.0    0.000000        2.773389        0.001249        0.000000            124900.0                 0.0           200000.0                0.0               0.062450                    0.0         0.141421              0.0          Ohmic
+3     0.03  0.001880     0.001880   15.957447        0.03    0.001880         0.0    0.000000        2.769926        0.001880        0.000000            188000.0                 0.0           300000.0                0.0               0.062667                    0.0         0.173205              0.0          Ohmic
+4     0.04  0.002512     0.002512   15.923567        0.04    0.002512         0.0    0.000000        2.767800        0.002512        0.000000            251200.0                 0.0           400000.0                0.0               0.062800                    0.0         0.200000              0.0          Ohmic
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: G
+Device: 9
+Total Files Processed: 7
+Total Sweeps: 7
+--- Metrics Summary ---
+   voltage   current  abs_current  resistance  voltage_ps  current_ps  voltage_ng  current_ng  log_Resistance  abs_Current_ps  abs_Current_ng  current_Density_ps  current_Density_ng  electric_field_ps  electric_field_ng  inverse_resistance_ps  inverse_resistance_ng  sqrt_Voltage_ps  sqrt_Voltage_ng classification
+0     0.00 -0.000009     0.000009   -0.000000        0.00   -0.000009         0.0    0.000009        0.000000        0.000009        0.000009                 0.0                 0.0                0.0                0.0               0.000000                    0.0         0.000000              0.0          Ohmic
+1     0.01  0.000703     0.000703   14.230824        0.01    0.000703         0.0    0.000000        2.655410        0.000703        0.000000             70270.0                 0.0           100000.0                0.0               0.070270                    0.0         0.100000              0.0          Ohmic
+2     0.02  0.001418     0.001418   14.104372        0.02    0.001418         0.0    0.000000        2.646485        0.001418        0.000000            141800.0                 0.0           200000.0                0.0               0.070900                    0.0         0.141421              0.0          Ohmic
+3     0.03  0.002134     0.002134   14.058107        0.03    0.002134         0.0    0.000000        2.643199        0.002134        0.000000            213400.0                 0.0           300000.0                0.0               0.071133                    0.0         0.173205              0.0          Ohmic
+4     0.04  0.002850     0.002850   14.035088        0.04    0.002850         0.0    0.000000        2.641560        0.002850        0.000000            285000.0                 0.0           400000.0                0.0               0.071250                    0.0         0.200000              0.0          Ohmic
+

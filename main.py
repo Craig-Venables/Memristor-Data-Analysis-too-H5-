@@ -26,7 +26,7 @@ SUMMARY_FILE = "device_metrics_summary.txt"  # File to store the device-level su
 OUTPUT_FILE_Currated = "skipped_files_Currated.txt"  # File to store skipped files or unknown sweep types
 SUMMARY_FILE_Currated = "device_metrics_summary_Currated.txt"  # File to store the device-level summary
 
-# # paths for test
+# # # paths for test
 # user_dir = Path.home()
 # base_dir = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Memristors")
 # base_currated = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Curated Data")

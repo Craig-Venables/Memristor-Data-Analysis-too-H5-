@@ -178,3 +178,18 @@ C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) 
 C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\5-fs-1.5v-0.001va.txt
 C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\6-fs-1.5v-0.01va.txt
 C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\7-fs-1.5v-0.01va.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\5-fs-2v-0.01sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\6-fs-2v-0.02sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\5-fs-2v-0.01sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\6-fs-2v-0.02sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\7-fs-2v-0.05sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\5-fs-2v-0.01sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\6-fs-2v-0.02sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Desktop\Origin Test Folder\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\7-fs-2v-0.05sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\WS2\D16-0.1mgml-Gold-PVA(2%)-Gold-s9\F\10\1-FS_0.5v_0.01s.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\5-fs-2v-0.01sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\6-fs-2v-0.02sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\7-fs-2v-0.05sv.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\G\3\7-Fs_2v_0.1s.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D13-0.2mgml-Gold-PS(2%)-Gold-s6\K\1\16-FS_0.5v_0.01sv_Icc_1E-3 - cmr decreased to 100na.txt
+C:\Users\ppxcv1\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D13-0.2mgml-Gold-PS(2%)-Gold-s6\K\1\17-FS_0.5v_0.01sv_Icc_1E-3 - cmr decreased to 100na.txt

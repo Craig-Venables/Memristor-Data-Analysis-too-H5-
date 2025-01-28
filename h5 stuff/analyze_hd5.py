@@ -2,11 +2,15 @@ import pandas as pd
 import re
 import matplotlib.pyplot as plt
 import numpy as np
+import h5py
 
 hdf5_file = '../memristor_data.h5'
 
 
 def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
+    #with h5py.File(hdf5_file,'r') as store:
+
+        #print(store)
     with pd.HDFStore(hdf5_file, mode='r') as store:
         # Group keys by depth
         grouped_keys = group_keys_by_level(store, max_depth=6)
@@ -17,13 +21,16 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
 
         # Analyze data at the lowest level (depth 6) only if necessary
         for key in grouped_keys[5]:
+            print(key)
             results = analyze_at_file_level(key, store, dataframe_type)
+            #print(results)
             if results is not None:
                 all_first_sweeps.append(results)
 
         #print(all_first_sweeps) # Debug
         # First sweep data
         initial_resistance(all_first_sweeps)
+        store.close()
 
 
 def initial_resistance(data,voltage_val = 0.1):
@@ -40,7 +47,7 @@ def initial_resistance(data,voltage_val = 0.1):
     for key, value in data:
         """value = all the data (metrics_df)
             key = folder structure"""
-
+        print('value',value)
         # print(f"\nAnalyzing key: {key}")  # Debugging print for each key
         parts = key.strip('/').split('/')
         segments = parts[1].split("-")
@@ -161,7 +168,7 @@ def extract_polymer_info(polymer):
 
 def group_keys_by_level(store, max_depth=6):
     """
-    Group keys by their depth in the hierarchy.
+    Group keys by their depth in the hierarchy. works with pu.h5
     """
     grouped_keys = {depth: [] for depth in range(1, max_depth + 1)}
     for key in store.keys():
@@ -173,6 +180,32 @@ def group_keys_by_level(store, max_depth=6):
 
     return grouped_keys
 
+# def group_keys_by_level(store, max_depth=6):
+#     """
+#     Groups keys in an HDF5 file by their depth in the hierarchy.
+#
+#     Args:
+#         store: An open HDF5 file object.
+#         max_depth: The maximum depth to group keys.
+#
+#     Returns:
+#         A dictionary where keys are depths (1 to max_depth) and values are lists of keys at those depths.
+#     """
+#     grouped_keys = {depth: [] for depth in range(1, max_depth + 1)}
+#
+#     def recursive_grouping(name, obj, current_depth=1):
+#         if current_depth > max_depth:
+#             return
+#         grouped_keys[current_depth].append(name)
+#         if isinstance(obj, h5py.Group):
+#             for sub_key in obj.keys():
+#                 recursive_grouping(f"{name}/{sub_key}", obj[sub_key], current_depth + 1)
+#
+#     for key in store.keys():
+#         obj = store[key]
+#         recursive_grouping(f"/{key}", obj, current_depth=1)
+#
+#     return grouped_keys
 
 def analyze_at_file_level(file_key, store, dataframe_type="_info"):
     """
