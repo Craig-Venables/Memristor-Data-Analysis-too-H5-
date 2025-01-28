@@ -2,11 +2,16 @@ import pandas as pd
 import re
 import matplotlib.pyplot as plt
 import numpy as np
+import h5py
+import time
 
 hdf5_file = '../memristor_data.h5'
 
-
+# todo yield
 def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
+    #with h5py.File(hdf5_file,'r') as store:
+    start = time.time()
+        #print(store)
     with pd.HDFStore(hdf5_file, mode='r') as store:
         # Group keys by depth
         grouped_keys = group_keys_by_level(store, max_depth=6)
@@ -17,14 +22,18 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
 
         # Analyze data at the lowest level (depth 6) only if necessary
         for key in grouped_keys[5]:
+            print(key)
             results = analyze_at_file_level(key, store, dataframe_type)
+            #print(results)
             if results is not None:
                 all_first_sweeps.append(results)
-
+        middle = time.time()
         #print(all_first_sweeps) # Debug
         # First sweep data
         initial_resistance(all_first_sweeps)
+        store.close()
 
+    print("time to organise the data before calling inisital first sweep " , middle-start)
 
 def initial_resistance(data,voltage_val = 0.1):
     """ Finds the initial reseistance between 0-0.1 V for the list of values given
@@ -40,7 +49,7 @@ def initial_resistance(data,voltage_val = 0.1):
     for key, value in data:
         """value = all the data (metrics_df)
             key = folder structure"""
-
+        #print('value',value)
         # print(f"\nAnalyzing key: {key}")  # Debugging print for each key
         parts = key.strip('/').split('/')
         segments = parts[1].split("-")
@@ -67,13 +76,20 @@ def initial_resistance(data,voltage_val = 0.1):
         if classification in valid_classifications:
             # only work on data that shows memristive or ohmic behaviour
             # Filter data
+            # Calculate resistance between the values of V
             resistance_data = value[(value['voltage'] >= 0) & (value['voltage'] <= voltage_val)]['resistance']
             resistance = resistance_data.mean()
 
+            # calculate gradient of line for the data to see difference
+
             if resistance <0:
                 print("check file as classification wrong - negative resistance seen on device")
-                print(key)
+                #print(key)
                 wrong_classification.append(key)
+
+                # maybe if resistance is <0 it should pull the second sweep until a
+                # value is found as sometimes the first sweeps non_conductive?
+
             else:
                 # Print calculated resistance for debugging
                 print(f"Calculated Average Resistance for key {key}: {resistance}")
@@ -87,7 +103,8 @@ def initial_resistance(data,voltage_val = 0.1):
                     'polymer_percent': polymer_percent,
                     'top_electrode': top_e,
                     'average_resistance': resistance,
-                    'classification': classification
+                    'classification': classification,
+                    'key': key
                 })
 
     resistance_df = pd.DataFrame(resistance_results)
@@ -98,8 +115,9 @@ def initial_resistance(data,voltage_val = 0.1):
 
     # Group by device_number
     grouped = resistance_df.groupby('device_number')
+    # also plot graph of all the resistances seen within a device and not avaerage them like below
 
-    # Compute device statistics
+    # Compute device statistics grouped
     device_stats = []
     for device, group in grouped:
         resistance = group['average_resistance'].mean()
@@ -116,15 +134,14 @@ def initial_resistance(data,voltage_val = 0.1):
             'spread': spread
         })
 
-
     np.savetxt('wrong_classifications.txt',wrong_classification,fmt='%s')
 
-    # Plot results
     device_stats_df = pd.DataFrame(device_stats)
     device_stats_df.to_csv("Average_resistance_device_0.1v.csv", index=False)
     resistance_df.to_csv("resistance_grouped_by_device_0.1v.csv", index=False)
 
 
+    #plot
     plt.figure(figsize=(10, 6))
     plt.errorbar(
         device_stats_df['device_number'],  # x values
@@ -141,7 +158,46 @@ def initial_resistance(data,voltage_val = 0.1):
     plt.yscale('log')
     plt.legend()
     plt.grid(True)
+    plt.savefig('1.png')
     plt.show()
+
+    plt.figure(figsize=(10, 6))
+    plt.errorbar(
+        resistance_df['device_number'],  # x values
+        resistance_df['average_resistance'],  # y values
+        fmt='x',
+        ecolor='red',
+        capsize=5,
+        label='Average Resistance'
+    )
+    plt.xlabel('Device Number')
+    plt.ylabel('Average Resistance (Ohms)')
+    plt.title('Average Resistance by Device  non averaged')
+    plt.yscale('log')
+    plt.legend()
+    plt.grid(True)
+    plt.savefig('2.png')
+    plt.show()
+
+    plt.figure(figsize=(10, 6))
+    plt.errorbar(
+        resistance_df['concentration'],  # x values
+        resistance_df['average_resistance'],  # y values
+        fmt='x',
+        ecolor='red',
+        capsize=5,
+        label='Average Resistance'
+    )
+    plt.xlabel('concentration')
+    plt.ylabel('Average Resistance (Ohms)')
+    plt.title('Average Resistance by Device  non averaged')
+    plt.yscale('log')
+    plt.legend()
+    plt.grid(True)
+    plt.savefig('3.png')
+    plt.show()
+
+
 
 
 def extract_concentration(concentration):
@@ -161,7 +217,7 @@ def extract_polymer_info(polymer):
 
 def group_keys_by_level(store, max_depth=6):
     """
-    Group keys by their depth in the hierarchy.
+    Group keys by their depth in the hierarchy. works with pu.h5
     """
     grouped_keys = {depth: [] for depth in range(1, max_depth + 1)}
     for key in store.keys():
@@ -173,6 +229,32 @@ def group_keys_by_level(store, max_depth=6):
 
     return grouped_keys
 
+# def group_keys_by_level(store, max_depth=6):
+#     """
+#     Groups keys in an HDF5 file by their depth in the hierarchy.
+#
+#     Args:
+#         store: An open HDF5 file object.
+#         max_depth: The maximum depth to group keys.
+#
+#     Returns:
+#         A dictionary where keys are depths (1 to max_depth) and values are lists of keys at those depths.
+#     """
+#     grouped_keys = {depth: [] for depth in range(1, max_depth + 1)}
+#
+#     def recursive_grouping(name, obj, current_depth=1):
+#         if current_depth > max_depth:
+#             return
+#         grouped_keys[current_depth].append(name)
+#         if isinstance(obj, h5py.Group):
+#             for sub_key in obj.keys():
+#                 recursive_grouping(f"{name}/{sub_key}", obj[sub_key], current_depth + 1)
+#
+#     for key in store.keys():
+#         obj = store[key]
+#         recursive_grouping(f"/{key}", obj, current_depth=1)
+#
+#     return grouped_keys
 
 def analyze_at_file_level(file_key, store, dataframe_type="_info"):
     """

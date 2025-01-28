@@ -193,7 +193,7 @@ def device_clasification(excell_dict, device_folder, section_folder, path):
         # print(device_folder)
         #print(excell_dict[section_folder])
         df = excell_dict[section_folder]
-        # Convert device_folder to the same type as in the DataFrame (assuming it's numeric)
+        # Convert device_folder to the same type as in the DataFrame
         device_folder = int(device_folder)
         # Find the row where the "Device #" matches the specified device_folder
         result_row = df[df["Device #"] == device_folder]

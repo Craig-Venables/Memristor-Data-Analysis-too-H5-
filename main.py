@@ -26,7 +26,7 @@ SUMMARY_FILE = "device_metrics_summary.txt"  # File to store the device-level su
 OUTPUT_FILE_Currated = "skipped_files_Currated.txt"  # File to store skipped files or unknown sweep types
 SUMMARY_FILE_Currated = "device_metrics_summary_Currated.txt"  # File to store the device-level summary
 
-# # paths for test
+# # # paths for test
 # user_dir = Path.home()
 # base_dir = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Memristors")
 # base_currated = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Curated Data")
@@ -53,7 +53,7 @@ def process_files_raw(txt_files, base_dir, store):
 
         if depth != 6:
             continue
-        print(relative_path)
+        #print(relative_path)
         # Extract file information
         filename, device, section, sample, material, nano_particles = extract_file_info(relative_path)
 
@@ -107,11 +107,17 @@ def process_files_raw(txt_files, base_dir, store):
         # TODO do the same again for the quantum dot spacing as well from another excell document
 
 
+
+
         # Save raw data and metrics to HDF5
         save_to_hdf5(store, key_info, key_metrics, df_file_stats, metrics_df)
 
         # Update the device metrics summary with new metrics
         update_device_metrics_summary(device_metrics_summary, filename, device, section, sample, material, metrics_df)
+
+
+        # todo add in yield to the document me
+        # todo find whats in the updated metrics summary
 
         # Track progress and print it
         processed_files += 1
