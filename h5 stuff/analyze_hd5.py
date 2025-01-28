@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 import matplotlib.pyplot as plt
+import numpy as np
 
 hdf5_file = '../memristor_data.h5'
 
@@ -11,7 +12,7 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
         grouped_keys = group_keys_by_level(store, max_depth=6)
         #print("Grouped keys by depth:", grouped_keys)  # Debugging output to check the grouped keys
 
-        # Store the data on the first sweeps of devices
+        # Store the data on the first sweeps of all devices
         all_first_sweeps = []
 
         # Analyze data at the lowest level (depth 6) only if necessary
@@ -20,15 +21,27 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
             if results is not None:
                 all_first_sweeps.append(results)
 
+        #print(all_first_sweeps) # Debug
         # First sweep data
         initial_resistance(all_first_sweeps)
 
 
-def initial_resistance(data):
+def initial_resistance(data,voltage_val = 0.1):
+    """ Finds the initial reseistance between 0-0.1 V for the list of values given
+        also filters for data that's not within the list valid_classifications to remove unwanted data
+    """
+
     resistance_results = []
+    wrong_classification = []
+
+    # Define valid classifications
+    valid_classifications = ["Memristive", "Ohmic","Conductive","intermittent","Mem-Capacitance"]  # Add more classifications here as needed
 
     for key, value in data:
-        #print(f"\nAnalyzing key: {key}")  # Debugging print for each key
+        """value = all the data (metrics_df)
+            key = folder structure"""
+
+        # print(f"\nAnalyzing key: {key}")  # Debugging print for each key
         parts = key.strip('/').split('/')
         segments = parts[1].split("-")
 
@@ -44,30 +57,38 @@ def initial_resistance(data):
               f"Bottom Electrode: {btm_e}, Polymer: {polymer}, Polymer Percent: {polymer_percent}, "
               f"Top Electrode: {top_e}")
 
-        # Filter data only once
-        resistance_data = value[(value['voltage'] >= 0) & (value['voltage'] <= 0.1)]['resistance']
+        try :
+            classification = value['classification'].iloc[0]
+        except:
+            classification = 'Unknown'
+            print(f"No classification found for key {key}")
 
-        # Print resistance data for debugging
-        #print(f"Resistance Data (0-0.1V) for key {key}:")
-        #print(resistance_data)
 
-        resistance = resistance_data.mean()
-        # Print calculated resistance for debugging
-        print(f"Calculated Average Resistance for key {key}: {resistance}")
+        if classification in valid_classifications:
+            # only work on data that shows memristive or ohmic behaviour
+            # Filter data
+            resistance_data = value[(value['voltage'] >= 0) & (value['voltage'] <= voltage_val)]['resistance']
+            resistance = resistance_data.mean()
 
-        classification = "placeholder"
+            if resistance <0:
+                print("check file as classification wrong - negative resistance seen on device")
+                print(key)
+                wrong_classification.append(key)
+            else:
+                # Print calculated resistance for debugging
+                print(f"Calculated Average Resistance for key {key}: {resistance}")
 
-        # Store results
-        resistance_results.append({
-            'device_number': device_number,
-            'concentration': concentration,
-            'bottom_electrode': btm_e,
-            'polymer': polymer,
-            'polymer_percent': polymer_percent,
-            'top_electrode': top_e,
-            'average_resistance': resistance,
-            'classification': classification
-        })
+                # Store results
+                resistance_results.append({
+                    'device_number': device_number,
+                    'concentration': concentration,
+                    'bottom_electrode': btm_e,
+                    'polymer': polymer,
+                    'polymer_percent': polymer_percent,
+                    'top_electrode': top_e,
+                    'average_resistance': resistance,
+                    'classification': classification
+                })
 
     resistance_df = pd.DataFrame(resistance_results)
 
@@ -95,6 +116,9 @@ def initial_resistance(data):
             'spread': spread
         })
 
+
+    np.savetxt('wrong_classifications.txt',wrong_classification,fmt='%s')
+
     # Plot results
     device_stats_df = pd.DataFrame(device_stats)
     device_stats_df.to_csv("Average_resistance_device_0.1v.csv", index=False)
@@ -114,6 +138,7 @@ def initial_resistance(data):
     plt.xlabel('Device Number')
     plt.ylabel('Average Resistance (Ohms)')
     plt.title('Average Resistance by Device')
+    plt.yscale('log')
     plt.legend()
     plt.grid(True)
     plt.show()

@@ -1,10 +1,15 @@
+import os.path
+
 import pandas as pd
 from pathlib import Path
+
+import excell
 from helpers import generate_analysis_params, extract_file_info, check_if_file_exists, print_progress, check_for_nan, \
     generate_hdf5_keys, check_sweep_type
 from file_processing import read_file_to_dataframe, add_metadata, analyze_file, save_to_hdf5
 from metrics_calculation import update_device_metrics_summary, write_device_summary
 from tables import NaturalNameWarning
+from excell import save_info_from_solution_devices_excell,save_info_from_device_into_excell
 import warnings
 
 # todo summary file needs chaging so its saved in level 4 not in the code level gpt was useless here
@@ -14,17 +19,23 @@ calculate_raw = True  # All raw files
 calculate_currated = False # Statistical analysis on curated files.
 
 # Constants for configuration
-FORCE_RECALCULATE = True  # Set to True to force recalculation and overwrite existing data in HDF5
+FORCE_RECALCULATE = False  # Set to True to force recalculation and overwrite existing data in HDF5
 PRINT_INTERVAL = 10  # Number of files after which progress is printed
 OUTPUT_FILE = "skipped_files.txt"  # File to store skipped files or unknown sweep types
 SUMMARY_FILE = "device_metrics_summary.txt"  # File to store the device-level summary
 OUTPUT_FILE_Currated = "skipped_files_Currated.txt"  # File to store skipped files or unknown sweep types
 SUMMARY_FILE_Currated = "device_metrics_summary_Currated.txt"  # File to store the device-level summary
 
+# # paths for test
+# user_dir = Path.home()
+# base_dir = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Memristors")
+# base_currated = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Curated Data")
+
 # paths
 user_dir = Path.home()
-base_dir = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Memristors")
+base_dir = user_dir / Path("OneDrive - The University of Nottingham/Documents/Phd/2) Data/1) Devices/1) Memristors")
 base_currated = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Curated Data")
+
 
 warnings.filterwarnings('ignore', category=NaturalNameWarning)
 skipped_files2 = []
@@ -42,9 +53,9 @@ def process_files_raw(txt_files, base_dir, store):
 
         if depth != 6:
             continue
-
+        print(relative_path)
         # Extract file information
-        filename, device, section, sample, material = extract_file_info(relative_path)
+        filename, device, section, sample, material, nano_particles = extract_file_info(relative_path)
 
         # Generate keys for HDF5 storage
         key_info, key_metrics = generate_hdf5_keys(material, sample, section, device, filename)
@@ -59,10 +70,14 @@ def process_files_raw(txt_files, base_dir, store):
             current_sample = sample
             print(f"Moving on to new sample: {sample}")
 
+        # Check if the sweep type is known
+        sweep_type = check_sweep_type(file, OUTPUT_FILE)
+
+
         # Read the file and process it
         #  Check for nan values
         df = read_file_to_dataframe(file)
-        if df is None or check_for_nan(df):
+        if df is None or check_for_nan(df) or sweep_type is None:
             skipped_files2.append(file)
             continue
 
@@ -72,13 +87,28 @@ def process_files_raw(txt_files, base_dir, store):
         analysis_params = generate_analysis_params(df, filename, base_dir, device)
 
         # Analyze the file based on its sweep type
-        sweep_type = check_sweep_type(file, OUTPUT_FILE)
+
         df_file_stats, metrics_df = analyze_file(sweep_type, analysis_params)
+
+        # pull the info from another sheet
+
+
+        if metrics_df is not None:
+            # finds the classification within the excell file and adds it to the end of the dataframe
+            Sample_location = os.path.join(base_dir,nano_particles,material,sample)
+            result = save_info_from_device_into_excell(sample, Sample_location)
+            classification = excell.device_clasification(result,device,section,Sample_location)
+            classification = classification
+            metrics_df['classification'] = classification
+        else:
+            print("metrics_df is None, cannot assign classification.")
+            print("check file,", key_info )
+
+        # TODO do the same again for the quantum dot spacing as well from another excell document
+
 
         # Save raw data and metrics to HDF5
         save_to_hdf5(store, key_info, key_metrics, df_file_stats, metrics_df)
-        print(key_metrics)
-        print(key_info)
 
         # Update the device metrics summary with new metrics
         update_device_metrics_summary(device_metrics_summary, filename, device, section, sample, material, metrics_df)
@@ -148,8 +178,10 @@ def process_files_currated(txt_files, base_dir, store):
         # Generate the analysis parameters
         analysis_params = generate_analysis_params(df, filename, base_dir, device)
 
+
         # Analyze the file based on its sweep type
         sweep_type = check_sweep_type(file, OUTPUT_FILE_Currated)
+
         df_file_stats, metrics_df = analyze_file(sweep_type, analysis_params)
 
         # look at excell file here
@@ -186,7 +218,8 @@ def extract_file_info(relative_path):
     section = relative_path.parts[3]  # Depth 4 -> Section
     sample = relative_path.parts[2]  # Depth 3 -> Sample
     material = relative_path.parts[1]  # Depth 2 -> Material
-    return filename, device, section, sample, material
+    nanoparticles = relative_path.parts[0]
+    return filename, device, section, sample, material,nanoparticles
 
 
 def main(base_dir,base_currated,calculate_raw,calculate_currated):
