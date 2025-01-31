@@ -12,6 +12,12 @@ from tables import NaturalNameWarning
 from excell import save_info_from_solution_devices_excell,save_info_from_device_into_excell
 import warnings
 
+# todo the h5 file should not use pandas as the primary storage, h5 dosnt natively support this,
+#  hence the issues, we can use numpy and convert the data and then back again later? numpy can only be numbers or
+#  strings not both look at soring each coloum seperatly and combining at the end? or changing the output from
+#  strings into numbers, ie 1=capacative 2 = memristive etc this might be easier
+
+
 # todo summary file needs chaging so its saved in level 4 not in the code level gpt was useless here
 
 # what should the code do
@@ -73,8 +79,6 @@ def process_files_raw(txt_files, base_dir, store):
         # Check if the sweep type is known
         sweep_type = check_sweep_type(file, OUTPUT_FILE)
 
-
-        # Read the file and process it
         #  Check for nan values
         df = read_file_to_dataframe(file)
         if df is None or check_for_nan(df) or sweep_type is None:
@@ -105,9 +109,6 @@ def process_files_raw(txt_files, base_dir, store):
             print("check file,", key_info )
 
         # TODO do the same again for the quantum dot spacing as well from another excell document
-
-
-
 
         # Save raw data and metrics to HDF5
         save_to_hdf5(store, key_info, key_metrics, df_file_stats, metrics_df)

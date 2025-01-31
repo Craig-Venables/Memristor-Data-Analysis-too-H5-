@@ -4,18 +4,21 @@ import matplotlib.pyplot as plt
 import numpy as np
 import h5py
 import time
+import h5py
 #l
 hdf5_file = '../memristor_data.h5'
 
 # todo yield
+
+
 def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
-    #with h5py.File(hdf5_file,'r') as store:
+    # with h5py.File(hdf5_file,'r') as store:
     start = time.time()
-        #print(store)
+    # print(store)
     with pd.HDFStore(hdf5_file, mode='r') as store:
         # Group keys by depth
         grouped_keys = group_keys_by_level(store, max_depth=6)
-        #print("Grouped keys by depth:", grouped_keys)  # Debugging output to check the grouped keys
+        # print("Grouped keys by depth:", grouped_keys)  # Debugging output to check the grouped keys
 
         # Store the data on the first sweeps of all devices
         all_first_sweeps = []
@@ -24,16 +27,16 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
         for key in grouped_keys[5]:
             print(key)
             results = analyze_at_file_level(key, store, dataframe_type)
-            #print(results)
+            # print(results)
             if results is not None:
                 all_first_sweeps.append(results)
         middle = time.time()
-        #print(all_first_sweeps) # Debug
+        # print(all_first_sweeps) # Debug
         # First sweep data
         initial_resistance(all_first_sweeps)
         store.close()
 
-    print("time to organise the data before calling inisital first sweep " , middle-start)
+    print("time to organise the data before calling inisital first sweep ", middle - start)
 
 def initial_resistance(data,voltage_val = 0.1):
     """ Finds the initial reseistance between 0-0.1 V for the list of values given
@@ -217,8 +220,11 @@ def extract_polymer_info(polymer):
 
 def group_keys_by_level(store, max_depth=6):
     """
-    Group keys by their depth in the hierarchy. works with pu.h5
+    Group keys by their depth in the hierarchy. works with pd55.h5
     """
+
+    print(list(store.keys()))
+
     grouped_keys = {depth: [] for depth in range(1, max_depth + 1)}
     for key in store.keys():
         parts = key.strip('/').split('/')
@@ -286,6 +292,72 @@ def filter_keys_by_suffix(keys, suffix):
     Filter keys by a specific suffix (e.g., '_info', '_metrics').
     """
     return [key for key in keys if key.endswith(suffix)]
+
+
+
+
+
+
+
+
+
+
+# def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
+#     #with h5py.File(hdf5_file,'r') as store:
+#     start = time.time()
+#         #print(store)
+#     with h5py.File(hdf5_file, 'r') as store:
+#         # Group keys by depth
+#         print("a")
+#         grouped_keys = group_keys_by_level(store, max_depth=6)
+#         #print(store.get(hdf5_file))
+#
+#         #print(grouped_keys)
+#         #print("Grouped keys by depth:", grouped_keys)  # Debugging output to check the grouped keys
+#
+#         # Store the data on the first sweeps of all devices
+#         all_first_sweeps = []
+#
+#         # Analyze data at the lowest level (depth 6) only if necessary
+#         for key in grouped_keys[5]:
+#             print(key)
+#             results = analyze_at_file_level(key, store, dataframe_type)
+#             #print(results)
+#             if results is not None:
+#                 all_first_sweeps.append(results)
+#         middle = time.time()
+#         #print(all_first_sweeps) # Debug
+#         # First sweep data
+#         initial_resistance(all_first_sweeps)
+#         store.close()
+#
+#     print("time to organise the data before calling inisital first sweep " , middle-start)
+#
+# def group_keys_by_level(store, max_depth=6):
+#     """
+#     Group dataset keys by their depth in the hierarchy using h5py,
+#     while filtering out internal pandas storage structures.
+#         works kinda
+#     """
+#     grouped_keys = {depth: [] for depth in range(1, max_depth +1 )}
+#     ignored_suffixes = {'block0_items', 'block0_values', 'axis0', 'axis1',"block1_values","block1_items"}
+#
+#     #with h5py.File(hdf5_file, 'r') as store:
+#     def visit(name, obj):
+#         if isinstance(obj, h5py.Dataset):  # Only include dataset paths
+#             parts = name.strip('/').split('/')
+#             depth = len(parts)
+#
+#             # Check if the last part is one of the ignored suffixes
+#             if depth > 1 and parts[-1] in ignored_suffixes:
+#                 return
+#
+#             if depth <= max_depth:
+#                 grouped_keys[depth].append(name)
+#
+#     store.visititems(visit)
+#
+#     return grouped_keys
 
 
 # Run analysis on _metrics data
