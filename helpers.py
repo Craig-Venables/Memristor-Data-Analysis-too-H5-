@@ -1,6 +1,7 @@
 import os
 import numpy as np
 from equations import zero_devision_check
+import h5py
 def split_iv_sweep(filepath):
     """ Read the IV sweep data from a file and return voltage and current arrays. """
     # Add your file reading logic here
@@ -72,7 +73,6 @@ def bounds(data):
     return max, min
 
 def check_sweep_type(filepath, output_file):
-    import re
 
     def is_number(s):
         """Check if a string represents a number."""
@@ -168,16 +168,54 @@ def print_progress(processed_files, total_files, interval):
         print(f"Processed {processed_files}/{total_files} files. {percent_completed:.2f}% done.")
 
 # Check if a file already exists in the HDF5
-def check_if_file_exists(store, key):
-    try:
-        if store.get_storer(key) is not None:
+def check_if_file_exists(store_path, key):
+    #try:
+    with h5py.File(store_path, 'a') as f:  # Open file in append mode
+        if key in f:  # Check if key exists in the file
             return True
-    except KeyError:
-        return False
-    return False
+        else:
+            return False
+
 
 # Generate HDF5 keys for storing data
 def generate_hdf5_keys(material, sample, section, device, filename):
     key_info = f'/{material}/{sample}/{section}/{device}/{filename}_info'
     key_metrics = f'/{material}/{sample}/{section}/{device}/{filename}_metrics'
     return key_info, key_metrics
+
+
+# def dataframe_to_structured_array(df):
+#     """Convert a Pandas DataFrame to a structured NumPy array with HDF5-compatible dtypes."""
+#     # Define HDF5-compatible string dtype
+#     string_dt = h5py.string_dtype(encoding='utf-8')
+#
+#     # Convert object columns (strings) to fixed-length UTF-8
+#     for col in df.select_dtypes(include=['object']):
+#         df[col] = df[col].astype(str)  # Ensure all objects are strings
+#         df[col] = df[col].astype(string_dt)  # Convert to HDF5-compatible strings
+#
+#     # Convert DataFrame to structured NumPy array
+#     return np.array(df.to_records(index=False))
+
+def map_classification_to_numbers(df):
+    # Only apply the mapping if the 'classification' column exists in the dataframe
+    if 'classification' in df.columns:
+        classification_map = {
+            'Memristive': 0,
+            'Capacitive': 1,
+            'Conductive': 2,
+            'Intermittent': 3,
+            'Mem-Capacitance': 4,
+            'Ohmic': 5,
+            'Non-Conductive': 6
+        }
+        df['classification'] = df['classification'].map(classification_map)
+    return df
+
+def dataframe_to_structured_array(df):
+    # Map classification to numbers where applicable
+    df = map_classification_to_numbers(df)
+
+    # Define the column data types, ensuring they are compatible with h5py
+    dtype = [(col, str) if df[col].dtype == 'object' else (col, df[col].dtype) for col in df.columns]
+    return np.array(df, dtype=dtype)

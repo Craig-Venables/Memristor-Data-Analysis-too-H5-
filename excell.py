@@ -21,6 +21,7 @@ def save_info_from_solution_devices_excell(device_name, excel_path):
         # Read the Excel file into a DataFrame without modifying it
         with pd.ExcelFile(excel_path, engine='openpyxl') as xls:
             df = pd.read_excel(xls, sheet_name='Memristor Devices')
+            df_overview = pd.read_excel(xls, sheet_name='Devices Overview')
 
         # Find the row with the given device name in the "Device Full Name" column
         row = df[df['Device Full Name'] == device_name]
@@ -50,11 +51,30 @@ def save_info_from_solution_devices_excell(device_name, excel_path):
                 'Np Concentraion': row.iloc[0]['Np Concentraion'], # this is spelt wrong
                 'Oz Clean Time': row.iloc[0]['Oz Clean Time'],
                 'Np Solution Id': row.iloc[0]['Np Solution Id'],
-                'Np Material': row.iloc[0]['Np Material'],
+                'Controll?': row.iloc[0]['Controll?'],
                 'Polymer': row.iloc[0]['Polymer'],
+                'Annealing': row.iloc[0]['Annealing'],
+
                 # Add more fields as needed
             }
             #print(info_dict)
+
+            # Extract information from 'Devices Overview' sheet
+            row_overview = df_overview[df_overview['Device Full Name'] == device_name]
+
+            if not row_overview.empty:
+                info_dict.update({
+                    'Volume Fraction': row_overview.iloc[0]['Volume fraction'],
+                    'Volume Fraction %': row_overview.iloc[0]['Volume fraction %'],
+                    'Weight Fraction': row_overview.iloc[0]['Weight Fraction'],
+                    '# Dots Volume 400μm': row_overview.iloc[0]['# Dots volume 400μm'],
+                    '# Dots in 200μm': row_overview.iloc[0]['# Dots in 200μm'],
+                    '# Dots in 100μm': row_overview.iloc[0]['# Dots in 100μm'],
+                    'Qd Spacing (nm)': row_overview.iloc[0]['Qd Spacing (nm)'],
+                    'Separation Distance': row_overview.iloc[0]['Seperation Distance']
+                })
+            else:
+                print(f"Warning: Device '{device_name}' not found in 'Devices Overview'.")
 
             solutions = ["Solution 1 ID", "Solution 2 ID", "Solution 3 ID", "Solution 4 ID"]
 
@@ -74,22 +94,22 @@ def save_info_from_solution_devices_excell(device_name, excel_path):
                         info_dict['Polymer 1 ' + solution] = df_solutions.iloc[0]['Polymer 1']
                         info_dict['Polymer 2 ' + solution] = df_solutions.iloc[0]['Polymer 2']
                         info_dict['Polymer % ' + solution] = df_solutions.iloc[0]['Polymer %']
-                        info_dict['Np solution mg/ml ' + solution] = df_solutions.iloc[0]['Np solution mg/ml']
-                        info_dict['Np Stock Solution Weight ' + solution] = df_solutions.iloc[0]['Np Stock Solution Weight']
-                        info_dict['Polymer 1 Weight ' + solution] = df_solutions.iloc[0]['Polymer 1 Weight']
-                        info_dict['Polymer 2 Weight ' + solution] = df_solutions.iloc[0]['Polymer 2 Weight']
-                        info_dict['Solvent Weight ' + solution] = df_solutions.iloc[0]['Solvent Weight']
-                        info_dict['Actual polymer (%) ' + solution] = df_solutions.iloc[0]['Actual polymer (%)']
+                        info_dict['Np solution mg/ml ' + solution] = df_solutions.iloc[0]['Np solution (mg/ml)']
+                        info_dict['Np Stock Solution Weight ' + solution] = df_solutions.iloc[0]['Np Stock Solution Weight (g)']
+                        info_dict['Polymer 1 Weight ' + solution] = df_solutions.iloc[0]['Polymer 1 Weight (g)']
+                        info_dict['Polymer 2 Weight ' + solution] = df_solutions.iloc[0]['Polymer 2 Weight (g)']
+                        info_dict['Solvent Weight ' + solution] = df_solutions.iloc[0]['Solvent Weight (g)']
+                        info_dict['Calculated polymer (%)' + solution] = df_solutions.iloc[0]['Calculated polymer (%)']
                         info_dict['Polymer ratio % ' + solution] = df_solutions.iloc[0]['Polymer ratio %']
                         info_dict['Solvent ' + solution] = df_solutions.iloc[0]['Solvent ']  # this has a space at end
                         info_dict['Controll? ' + solution] = df_solutions.iloc[0]['Controll?']
-                        info_dict['Np Type ' + solution] = df_solutions.iloc[0]['Np Type']
                         info_dict['Calculated mg/ml ' + solution] = df_solutions.iloc[0]['Calculated mg/ml']
-                        info_dict['Polymer Density ' + solution] = df_solutions.iloc[0]['Polymer Density']
-                        info_dict['Solvent Density ' + solution] = df_solutions.iloc[0]['Solvent Density']
+                        info_dict['Polymer Density ' + solution] = df_solutions.iloc[0]['Polymer Density (g/cm^3)']
+                        info_dict['Solvent Density ' + solution] = df_solutions.iloc[0]['Solvent Density (g/cm^3)']
                         info_dict['Np Material ' + solution] = df_solutions.iloc[0]['Np Material']
-                        info_dict['Mg of Quantum dots used ' + solution] = df_solutions.iloc[0]['Mg of Quantum dots used']
-                        info_dict['Stock Np Solution Concentration ' + solution] = df_solutions.iloc[0]['Stock Np Solution Concentration']
+                        info_dict['Np Size (nm) ' + solution] = df_solutions.iloc[0]['Np Size (nm)']
+                        info_dict['Np weight (g) ' + solution] = df_solutions.iloc[0]['Np weight (g)']
+                        info_dict['Stock Np Solution Concentration ' + solution] = df_solutions.iloc[0]['Stock Np Solution Concentration (mg/ml)']
                     else:
                         print(f"Skipping search in 'Prepared Solutions' because Solution {solution} ID is blank or null.")
                         continue  # Skip the rest of the loop for this solution ID
@@ -106,6 +126,8 @@ def save_info_from_solution_devices_excell(device_name, excel_path):
             # #print("saved", device_name,"information" )
 
             #info_dict_df = pd.DataFrame.from_dict(info_dict)
+
+            #rint(info_dict_df)
 
             return (info_dict)
 
@@ -133,7 +155,7 @@ def save_info_from_device_into_excell(device_name,device_fol_location):
         with pd.ExcelFile(excel_path, engine='openpyxl') as xls:
             df = pd.read_excel(xls, sheet_name='Sheet1')
 
-            # List to store DataFrames for each section
+            # List to store_path DataFrames for each section
             section_dataframes = {}
 
             # Loop through sections from 'A' to 'L'

@@ -12,9 +12,9 @@ hdf5_file = '../memristor_data.h5'
 
 
 def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
-    # with h5py.File(hdf5_file,'r') as store:
+    # with h5py.File(hdf5_file,'r') as store_path:
     start = time.time()
-    # print(store)
+    # print(store_path)
     with pd.HDFStore(hdf5_file, mode='r') as store:
         # Group keys by depth
         grouped_keys = group_keys_by_level(store, max_depth=6)
@@ -235,12 +235,12 @@ def group_keys_by_level(store, max_depth=6):
 
     return grouped_keys
 
-# def group_keys_by_level(store, max_depth=6):
+# def group_keys_by_level(store_path, max_depth=6):
 #     """
 #     Groups keys in an HDF5 file by their depth in the hierarchy.
 #
 #     Args:
-#         store: An open HDF5 file object.
+#         store_path: An open HDF5 file object.
 #         max_depth: The maximum depth to group keys.
 #
 #     Returns:
@@ -256,8 +256,8 @@ def group_keys_by_level(store, max_depth=6):
 #             for sub_key in obj.keys():
 #                 recursive_grouping(f"{name}/{sub_key}", obj[sub_key], current_depth + 1)
 #
-#     for key in store.keys():
-#         obj = store[key]
+#     for key in store_path.keys():
+#         obj = store_path[key]
 #         recursive_grouping(f"/{key}", obj, current_depth=1)
 #
 #     return grouped_keys
@@ -282,7 +282,7 @@ def analyze_at_file_level(file_key, store, dataframe_type="_info"):
         #print(f"\nData for key {file_key}:")
         #print(data.head())
 
-        # find all first files and store for later use
+        # find all first files and store_path for later use
         if filename.startswith('1-'):
             return file_key, data
 
@@ -303,14 +303,14 @@ def filter_keys_by_suffix(keys, suffix):
 
 
 # def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
-#     #with h5py.File(hdf5_file,'r') as store:
+#     #with h5py.File(hdf5_file,'r') as store_path:
 #     start = time.time()
-#         #print(store)
-#     with h5py.File(hdf5_file, 'r') as store:
+#         #print(store_path)
+#     with h5py.File(hdf5_file, 'r') as store_path:
 #         # Group keys by depth
 #         print("a")
-#         grouped_keys = group_keys_by_level(store, max_depth=6)
-#         #print(store.get(hdf5_file))
+#         grouped_keys = group_keys_by_level(store_path, max_depth=6)
+#         #print(store_path.get(hdf5_file))
 #
 #         #print(grouped_keys)
 #         #print("Grouped keys by depth:", grouped_keys)  # Debugging output to check the grouped keys
@@ -321,7 +321,7 @@ def filter_keys_by_suffix(keys, suffix):
 #         # Analyze data at the lowest level (depth 6) only if necessary
 #         for key in grouped_keys[5]:
 #             print(key)
-#             results = analyze_at_file_level(key, store, dataframe_type)
+#             results = analyze_at_file_level(key, store_path, dataframe_type)
 #             #print(results)
 #             if results is not None:
 #                 all_first_sweeps.append(results)
@@ -329,11 +329,11 @@ def filter_keys_by_suffix(keys, suffix):
 #         #print(all_first_sweeps) # Debug
 #         # First sweep data
 #         initial_resistance(all_first_sweeps)
-#         store.close()
+#         store_path.close()
 #
 #     print("time to organise the data before calling inisital first sweep " , middle-start)
 #
-# def group_keys_by_level(store, max_depth=6):
+# def group_keys_by_level(store_path, max_depth=6):
 #     """
 #     Group dataset keys by their depth in the hierarchy using h5py,
 #     while filtering out internal pandas storage structures.
@@ -342,7 +342,7 @@ def filter_keys_by_suffix(keys, suffix):
 #     grouped_keys = {depth: [] for depth in range(1, max_depth +1 )}
 #     ignored_suffixes = {'block0_items', 'block0_values', 'axis0', 'axis1',"block1_values","block1_items"}
 #
-#     #with h5py.File(hdf5_file, 'r') as store:
+#     #with h5py.File(hdf5_file, 'r') as store_path:
 #     def visit(name, obj):
 #         if isinstance(obj, h5py.Dataset):  # Only include dataset paths
 #             parts = name.strip('/').split('/')
@@ -355,7 +355,7 @@ def filter_keys_by_suffix(keys, suffix):
 #             if depth <= max_depth:
 #                 grouped_keys[depth].append(name)
 #
-#     store.visititems(visit)
+#     store_path.visititems(visit)
 #
 #     return grouped_keys
 

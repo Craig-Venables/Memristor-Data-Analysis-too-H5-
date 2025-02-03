@@ -17,7 +17,7 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
 
         store.visititems(print_structure)
 
-        #store.visit(print)  # Print all keys in the HDF5 file
+        #store_path.visit(print)  # Print all keys in the HDF5 file
         # Group keys by depth
         grouped_keys = group_keys_by_level(store, max_depth=6)
         #print("Grouped keys by depth:", grouped_keys)  # Debugging output to check the grouped keys

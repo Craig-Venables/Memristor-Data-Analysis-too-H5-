@@ -12,26 +12,26 @@ with pd.HDFStore(hdf5_file_path, mode='r') as store:
 
 
 # Open the HDF5 file
-# with pd.HDFStore(hdf5_file_path, mode='r') as store:
+# with pd.HDFStore(hdf5_file_path, mode='r') as store_path:
 #     # List all keys (datasets) in the HDF5 file
 #     print("Datasets available in the HDF5 file:")
-#     for key in store.keys():
+#     for key in store_path.keys():
 #         print(f" - {key}")
 #
 #     # Load and inspect the data for each key
 #     print("\nInspecting data from each key:")
-#     for key in store.keys():
+#     for key in store_path.keys():
 #         print(f"\nKey: {key}")
 #
 #         # Get information about the stored object
-#         storer = store.get_storer(key)
+#         storer = store_path.get_storer(key)
 #         print(f"Data type of stored object: {type(storer)}")
 #
 #         # Check if the object is a Frame (DataFrame) or Table
 #         if isinstance(storer, pd.io.pytables.FrameFixed):
 #             try:
 #                 # Load the dataset into a pandas DataFrame
-#                 df = store.get(key)
+#                 df = store_path.get(key)
 #                 print("\nColumns in the DataFrame:")
 #                 print(df.columns.tolist())  # Print all column names
 #                 print("\nFirst few rows of the DataFrame:")
@@ -41,7 +41,7 @@ with pd.HDFStore(hdf5_file_path, mode='r') as store:
 #         elif isinstance(storer, pd.io.pytables.Table):
 #             try:
 #                 # If it's a Table, load it as a DataFrame
-#                 df = store.select(key)
+#                 df = store_path.select(key)
 #                 print("\nColumns in the DataFrame:")
 #                 print(df.columns.tolist())  # Print all column names
 #                 print("\nFirst few rows of the DataFrame:")

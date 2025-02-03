@@ -21,7 +21,7 @@ def calculate_metrics_for_loops(split_v_data, split_c_data):
     - normalized_areas (list): List of normalized areas for each split array
     '''
 
-    # Initialize lists to store the values for each metric
+    # Initialize lists to store_path the values for each metric
     ps_areas = []
     ng_areas = []
     areas = []
@@ -124,7 +124,7 @@ def on_off_values(voltage_data, current_data):
     # Convert DataFrame columns to lists
     voltage_data = voltage_data.to_numpy()
     current_data = current_data.to_numpy()
-    # Initialize lists to store Ron and Roff values
+    # Initialize lists to store_path Ron and Roff values
     resistance_on_value = []
     resistance_off_value = []
     # Initialize default values for on and off voltages
@@ -263,13 +263,14 @@ def area_under_curve(voltage, current):
     return area
 
 
-def update_device_metrics_summary(device_metrics_summary, filename, device, section, sample, material, metrics_df):
-    """ Update the device metrics summary with new metrics data. """
+def update_device_metrics_summary(device_file_stats_summary, filename, device, section, sample, material, metrics_df):
+    """ Update the device metrics summary with new metrics data.
+     This makes an od df will need work"""
 
     # Check if the device is already in the summary
-    if device not in device_metrics_summary:
+    if device not in device_file_stats_summary:
         # Initialize a new entry for the device if not present
-        device_metrics_summary[device] = {
+        device_file_stats_summary[device] = {
             'Filename': [],
             'Material': material,
             'Sample': sample,
@@ -280,22 +281,24 @@ def update_device_metrics_summary(device_metrics_summary, filename, device, sect
         }
 
     # Add the filename to the list of processed files for this device
-    device_metrics_summary[device]['Filename'].append(filename)
+    device_file_stats_summary[device]['Filename'].append(filename)
 
     # Increment total files processed
-    device_metrics_summary[device]['total_files'] += 1
+    device_file_stats_summary[device]['total_files'] += 1
 
     # Extract the number of sweeps from the metrics DataFrame
     total_sweeps = metrics_df['num_sweeps'].sum() if 'num_sweeps' in metrics_df.columns else 1
-    device_metrics_summary[device]['total_sweeps'] += total_sweeps
+    device_file_stats_summary[device]['total_sweeps'] += total_sweeps
 
     # Store the metrics DataFrame
-    device_metrics_summary[device]['metrics'].append(metrics_df)
+    device_file_stats_summary[device]['metrics'].append(metrics_df)
 
 
 # Write device summary to the correct location (depth 4)
 def write_device_summary(device_metrics_summary, summary_file):
-    """ Write the device-level metrics summary to a text file. """
+    """ Write the device-level metrics summary to a text file.
+     This isnt corrdct and needs work"""
+    print(device_metrics_summary)
     with open(summary_file, 'w') as f:
         for device, summary in device_metrics_summary.items():
             material = summary['Material']

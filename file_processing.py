@@ -1,10 +1,11 @@
 import pandas as pd
+import h5py
 from equations import absolute_val, current_density_eq, resistance, electric_field_eq, inverse_resistance_eq, \
     sqrt_array, zero_devision_check,log_value,filter_positive_values,filter_negative_values
 import equations as eq
 from metrics_calculation import calculate_metrics_for_loops, area_under_curves, on_off_values
 from plotting import plot_loop_data, plot_single_sweep_data
-from helpers import check_for_loops, extract_folder_names, check_if_folder_exists,split_iv_sweep
+from helpers import check_for_loops, extract_folder_names, check_if_folder_exists,split_iv_sweep,dataframe_to_structured_array
 
 
 def file_analysis(df, plot_graph, save_df, device_path, re_save_graph, short_name, long_name):
@@ -185,11 +186,40 @@ def analyze_file(sweep_type, analysis_params):
     else:
         return None, None
 
+
+def save_to_hdf5(store_path, key_file_stats, key_raw_data, df_file_stats, df_raw_data):
+    # df_raw_data = map_classification_to_numbers(df_raw_data)
+    # df_file_stats = map_classification_to_numbers(df_file_stats)
+
+    structured_raw_data = dataframe_to_structured_array(df_raw_data)
+    structured_file_stats = dataframe_to_structured_array(df_file_stats)
+
+    with h5py.File(store_path, 'a') as f:
+        if key_raw_data in f:
+            del f[key_raw_data]
+        f.create_dataset(key_raw_data, data=structured_raw_data, compression="gzip", dtype=structured_raw_data.dtype)
+
+        if key_file_stats in f:
+            del f[key_file_stats]
+        f.create_dataset(key_file_stats, data=structured_file_stats, compression="gzip",
+                         dtype=structured_file_stats.dtype)
+
+    print("Data successfully saved to HDF5!")
+
+
 # Save raw data and metrics to HDF5
-def save_to_hdf5(store, key_raw, key_metrics, df_file_stats, metrics_df):
-    # print("key_metrics" , key_metrics)
-    # print("key_raw",key_raw)
-    if df_file_stats is not None and not df_file_stats.empty:
-        store.put(key_raw, df_file_stats)
-    if metrics_df is not None and not metrics_df.empty:
-        store.put(key_metrics, metrics_df)
+# def save_to_hdf5(store_path, key_raw, key_metrics, df_file_stats, df_raw_data):
+#     # print("key_metrics" , key_metrics)
+#     # print("key_raw",key_raw
+#     # converet to structured array
+#     structured_file_stats=dataframe_to_structured_array(df_file_stats)
+#     structured_raw_data = dataframe_to_structured_array(df_raw_data)
+#
+#     with h5py.File("C:/temp/memristor_data2.h5", "w") as f:
+#         f.create_dataset("raw_data", data=structured_raw_data, compression="gzip")
+#         f.create_dataset("file_stats", data=structured_file_stats, compression="gzip")
+#
+#     # if df_file_stats is not None and not df_file_stats.empty:
+#     #     store_path.put(key_raw, df_file_stats)
+#     # if df_raw_data is not None and not df_raw_data.empty:
+#     #     store_path.put(key_metrics, df_raw_data)
