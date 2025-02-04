@@ -195,16 +195,16 @@ def save_to_hdf5(store_path, key_file_stats, key_raw_data, df_file_stats, df_raw
     structured_file_stats = dataframe_to_structured_array(df_file_stats)
 
     with h5py.File(store_path, 'a') as f:
-        if key_raw_data in f:
-            del f[key_raw_data]
+        # if key_raw_data in f:
+        #     del f[key_raw_data]
         f.create_dataset(key_raw_data, data=structured_raw_data, compression="gzip", dtype=structured_raw_data.dtype)
 
-        if key_file_stats in f:
-            del f[key_file_stats]
+        # if key_file_stats in f:
+        #     del f[key_file_stats]
         f.create_dataset(key_file_stats, data=structured_file_stats, compression="gzip",
                          dtype=structured_file_stats.dtype)
 
-    print("Data successfully saved to HDF5!")
+    #print("Data successfully saved to HDF5!")
 
 
 # Save raw data and metrics to HDF5

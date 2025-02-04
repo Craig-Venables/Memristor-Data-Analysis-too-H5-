@@ -6,7 +6,8 @@ import h5py
 import time
 import h5py
 #l
-hdf5_file = '../memristor_data.h5'
+hdf5_file = '../memristor_data3.h5'
+#hdf5_file = '../memristor_data_backup.h5'
 
 # todo yield
 
@@ -15,23 +16,25 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
     # with h5py.File(hdf5_file,'r') as store_path:
     start = time.time()
     # print(store_path)
-    with pd.HDFStore(hdf5_file, mode='r') as store:
+    with h5py.File(hdf5_file, "r") as store:
+
+
         # Group keys by depth
-        grouped_keys = group_keys_by_level(store, max_depth=6)
-        # print("Grouped keys by depth:", grouped_keys)  # Debugging output to check the grouped keys
+        grouped_keys = get_keys_at_depth(store, target_depth=5)
+        print(grouped_keys)
 
         # Store the data on the first sweeps of all devices
         all_first_sweeps = []
 
-        # Analyze data at the lowest level (depth 6) only if necessary
-        for key in grouped_keys[5]:
+        # Analyze data at for the keys given above
+        for key in grouped_keys:
             print(key)
             results = analyze_at_file_level(key, store, dataframe_type)
-            # print(results)
+            print(results)
             if results is not None:
                 all_first_sweeps.append(results)
         middle = time.time()
-        # print(all_first_sweeps) # Debug
+
         # First sweep data
         initial_resistance(all_first_sweeps)
         store.close()
@@ -218,22 +221,47 @@ def extract_polymer_info(polymer):
     return name, percentage
 
 
-def group_keys_by_level(store, max_depth=6):
+def get_keys_at_depth(store, target_depth=5):
     """
-    Group keys by their depth in the hierarchy. works with pd55.h5
+    Recursively traverse the HDF5 file and return keys at the specified depth.
+
+    Parameters:
+    - store: h5py.File or h5py.Group object
+    - target_depth: int, depth at which to collect keys
+
+    Returns:
+    - List of keys at the specified depth
     """
 
-    print(list(store.keys()))
+    def traverse(group, current_depth, prefix=""):
+        keys = []
+        for name in group:
+            path = f"{prefix}/{name}".strip("/")
+            if isinstance(group[name], h5py.Group):  # If it's a group, recurse
+                keys.extend(traverse(group[name], current_depth + 1, path))
+            elif isinstance(group[name], h5py.Dataset):  # If it's a dataset, check depth
+                if current_depth == target_depth:
+                    keys.append(path)
+        return keys
 
-    grouped_keys = {depth: [] for depth in range(1, max_depth + 1)}
-    for key in store.keys():
-        parts = key.strip('/').split('/')
-        depth = len(parts)
-        #print(f"Key: {key} -> Parts: {parts}, Depth: {depth}")  # Debugging output
-        if depth <= max_depth:
-            grouped_keys[depth].append(key)
+    return traverse(store, 1)  # Start at depth 1
 
-    return grouped_keys
+# def group_keys_by_level(store, max_depth=6):
+#     """
+#     Group keys by their depth in the hierarchy. works with pd55.h5
+#     """
+#     print("keys_by_level")
+#     print(list(store.keys()))
+#
+#     grouped_keys = {depth: [] for depth in range(1, max_depth + 1)}
+#     for key in store.keys():
+#         parts = key.strip('/').split('/')
+#         depth = len(parts)
+#         #print(f"Key: {key} -> Parts: {parts}, Depth: {depth}")  # Debugging output
+#         if depth <= max_depth:
+#             grouped_keys[depth].append(key)
+#
+#     return grouped_keys
 
 # def group_keys_by_level(store_path, max_depth=6):
 #     """
@@ -267,6 +295,7 @@ def analyze_at_file_level(file_key, store, dataframe_type="_info"):
     Perform analysis at the file level, specifically targeting '_info' or '_metrics' dataframes.
     """
     parts = file_key.strip('/').split('/')
+    #print(parts)
     filename = parts[-1]
     device = parts[-2]
     section = parts[-3]
@@ -278,6 +307,7 @@ def analyze_at_file_level(file_key, store, dataframe_type="_info"):
 
     if target_key in store.keys():
         data = store[target_key]
+
         # Debugging output for data preview
         #print(f"\nData for key {file_key}:")
         #print(data.head())

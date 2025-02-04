@@ -27,7 +27,7 @@ calculate_raw = True  # All raw files
 calculate_currated = False # Statistical analysis on curated files.
 
 # Constants for configuration
-FORCE_RECALCULATE = False  # Set to True to force recalculation and overwrite existing data in HDF5
+FORCE_RECALCULATE = True  # Set to True to force recalculation and overwrite existing data in HDF5
 PRINT_INTERVAL = 10  # Number of files after which progress is printed
 OUTPUT_FILE = "skipped_files.txt"  # File to store_path skipped files or unknown sweep types
 SUMMARY_FILE = "device_metrics_summary.txt"  # File to store_path the device-level summary
@@ -261,7 +261,7 @@ def main(base_dir,base_currated,calculate_raw,calculate_currated):
 
     if calculate_raw:
         # Process all raw files
-        path = 'C:/temp/memristor_data2.h5'
+        path = 'memristor_data3.h5'
         with h5py.File(path,'a') :
             process_files_raw(txt_files_base, base_dir, path)
 
