@@ -11,17 +11,6 @@ from tables import NaturalNameWarning
 from excell import save_info_from_solution_devices_excell,save_info_from_device_into_excell
 import warnings
 
-# to do next, save file location into a better place and now adapt analysis code to work with it.
-# add another dataframe for substrate information
-
-# todo the h5 file should not use pandas as the primary storage, h5 dosnt natively support this,
-#  hence the issues, we can use numpy and convert the data and then back again later? numpy can only be numbers or
-#  strings not both look at soring each coloum seperatly and combining at the end? or changing the output from
-#  strings into numbers, ie 1=capacative 2 = memristive etc this might be easier
-
-
-# todo summary file needs chaging so its saved in level 4 not in the code level gpt was useless here
-
 # what should the code do
 calculate_raw = True  # All raw files
 calculate_currated = False # Statistical analysis on curated files.
@@ -34,24 +23,28 @@ SUMMARY_FILE = "device_metrics_summary.txt"  # File to store_path the device-lev
 OUTPUT_FILE_Currated = "skipped_files_Currated.txt"  # File to store_path skipped files or unknown sweep types
 SUMMARY_FILE_Currated = "device_metrics_summary_Currated.txt"  # File to store_path the device-level summary
 
-
-# # paths for test
+debugging = False
 user_dir = Path.home()
-base_dir = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Memristors")
-base_currated = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Curated Data")
-solution_devices_excell_path = user_dir / Path("OneDrive - The University of Nottingham/Documents/Phd/solutions and devices.xlsx")
 
-# paths
-# user_dir = Path.home()
-# base_dir = user_dir / Path("OneDrive - The University of Nottingham/Documents/Phd/2) Data/1) Devices/1) Memristors")
-# base_currated = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Curated Data")
-solution_devices_excell_path = user_dir / Path("OneDrive - The University of Nottingham/Documents/Phd/solutions and devices.xlsx")
+if debugging:
+    # # paths for test
+    base_dir = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Memristors")
+    base_currated = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Curated Data")
 
+else:
+    # paths
+    base_dir = user_dir / Path("OneDrive - The University of Nottingham/Documents/Phd/2) Data/1) Devices/1) Memristors")
+    base_currated = user_dir / Path("OneDrive - The University of Nottingham/Desktop/Origin Test Folder/1) Curated Data")
+
+
+# where do you want to save the h5 files?
+save_location = user_dir / Path("OneDrive - The University of Nottingham/Documents/Phd/1) Projects/1) Memristors/4) Code analysis")
+# location of excell
+solution_devices_excell_path = user_dir / Path("OneDrive - The University of Nottingham/Documents/Phd/solutions and devices.xlsx")
 
 warnings.filterwarnings('ignore', category=NaturalNameWarning)
 skipped_files2 = []
 skipped_files_currated = []
-
 
 def process_files_raw(txt_files, base_dir, store_path):
     processed_files = 0
@@ -253,7 +246,7 @@ def extract_file_info(relative_path):
     return filename, device, section, sample, material,nanoparticles
 
 
-def main(base_dir,base_currated,calculate_raw,calculate_currated):
+def main(base_dir,base_currated,calculate_raw,calculate_currated,save_location):
     # Set the working directory to the user's home directory'
 
     txt_files_base = list(f for f in base_dir.rglob('*.txt') if len(f.relative_to(base_dir).parts) == 6)
@@ -261,15 +254,18 @@ def main(base_dir,base_currated,calculate_raw,calculate_currated):
 
     if calculate_raw:
         # Process all raw files
-        path = 'memristor_data3.h5'
+        path = save_location/'Memristor_data.h5'
         with h5py.File(path,'a') :
             process_files_raw(txt_files_base, base_dir, path)
 
+    # broken use later
     if calculate_currated:
         # Process curated files
-        with h5py.File('Currated__data.h5') as store:
+        path = save_location/'Currated__data.h5'
+        with h5py.File(path,'a') as store:
             process_files_currated(txt_files_curr, base_currated, store)
 
 
+
 if __name__ == '__main__':
-    main(base_dir,base_currated,calculate_raw,calculate_currated)
+    main(base_dir,base_currated,calculate_raw,calculate_currated,save_location)

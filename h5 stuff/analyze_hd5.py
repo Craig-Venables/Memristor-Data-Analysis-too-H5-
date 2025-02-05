@@ -12,12 +12,11 @@ hdf5_file = '../memristor_data3.h5'
 # todo yield
 
 
-def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
-    # with h5py.File(hdf5_file,'r') as store_path:
-    start = time.time()
-    # print(store_path)
-    with h5py.File(hdf5_file, "r") as store:
+def analyze_hdf5_levels(hdf5_file):
 
+    start = time.time()
+
+    with h5py.File(hdf5_file, "r") as store:
 
         # Group keys by depth
         grouped_keys = get_keys_at_depth(store, target_depth=5)
@@ -25,16 +24,39 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
 
         # Store the data on the first sweeps of all devices
         all_first_sweeps = []
+        all_second_sweeps = []
+        all_third_sweeps = []
+        all_four_sweeps = []
+        all_five_sweeps = []
 
-        # Analyze data at for the keys given above
-        for key in grouped_keys:
-            print(key)
-            results = analyze_at_file_level(key, store, dataframe_type)
-            print(results)
-            if results is not None:
-                all_first_sweeps.append(results)
+        # Extract base keys by removing suffixes and co
+        base_keys = sorted(set(k.rsplit('_', 2)[0] for k in grouped_keys))
+
+        # Analyze data for each file!
+        for base_key in base_keys:
+            print(base_key)
+
+            # Retrieve both datasets at once
+            df_raw_data, df_file_stats,parts_key = return_data(base_key, store)
+            # parts_key = filename(parts[-1]) , device(parts[-2]) etc...
+
+
+            # store the first five sweeps of any device in a dataframe
+            if parts_key[-1].startswith('1-'):
+                all_first_sweeps.append((base_key,df_raw_data))
+            if parts_key[-1].startswith('2-'):
+                all_second_sweeps.append((base_key,df_raw_data))
+            if parts_key[-1].startswith('3-'):
+                all_third_sweeps.append((base_key,df_raw_data))
+            if parts_key[-1].startswith('4-'):
+                all_four_sweeps.append((base_key,df_raw_data))
+            if parts_key[-1].startswith('5-'):
+                all_five_sweeps.append((base_key,df_raw_data))
+
+
         middle = time.time()
 
+        print(all_first_sweeps)
         # First sweep data
         initial_resistance(all_first_sweeps)
         store.close()
@@ -51,7 +73,7 @@ def initial_resistance(data,voltage_val = 0.1):
 
     # Define valid classifications
     valid_classifications = ["Memristive", "Ohmic","Conductive","intermittent","Mem-Capacitance"]  # Add more classifications here as needed
-
+    valid_classifications = ["Memristive"]
     for key, value in data:
         """value = all the data (metrics_df)
             key = folder structure"""
@@ -246,76 +268,61 @@ def get_keys_at_depth(store, target_depth=5):
 
     return traverse(store, 1)  # Start at depth 1
 
-# def group_keys_by_level(store, max_depth=6):
-#     """
-#     Group keys by their depth in the hierarchy. works with pd55.h5
-#     """
-#     print("keys_by_level")
-#     print(list(store.keys()))
-#
-#     grouped_keys = {depth: [] for depth in range(1, max_depth + 1)}
-#     for key in store.keys():
-#         parts = key.strip('/').split('/')
-#         depth = len(parts)
-#         #print(f"Key: {key} -> Parts: {parts}, Depth: {depth}")  # Debugging output
-#         if depth <= max_depth:
-#             grouped_keys[depth].append(key)
-#
-#     return grouped_keys
 
-# def group_keys_by_level(store_path, max_depth=6):
-#     """
-#     Groups keys in an HDF5 file by their depth in the hierarchy.
-#
-#     Args:
-#         store_path: An open HDF5 file object.
-#         max_depth: The maximum depth to group keys.
-#
-#     Returns:
-#         A dictionary where keys are depths (1 to max_depth) and values are lists of keys at those depths.
-#     """
-#     grouped_keys = {depth: [] for depth in range(1, max_depth + 1)}
-#
-#     def recursive_grouping(name, obj, current_depth=1):
-#         if current_depth > max_depth:
-#             return
-#         grouped_keys[current_depth].append(name)
-#         if isinstance(obj, h5py.Group):
-#             for sub_key in obj.keys():
-#                 recursive_grouping(f"{name}/{sub_key}", obj[sub_key], current_depth + 1)
-#
-#     for key in store_path.keys():
-#         obj = store_path[key]
-#         recursive_grouping(f"/{key}", obj, current_depth=1)
-#
-#     return grouped_keys
 
-def analyze_at_file_level(file_key, store, dataframe_type="_info"):
+def return_data(base_key, store):
     """
-    Perform analysis at the file level, specifically targeting '_info' or '_metrics' dataframes.
+    Given the file key return the data in a pd dataframe converting form numpy array
     """
-    parts = file_key.strip('/').split('/')
-    #print(parts)
+    parts = base_key.strip('/').split('/')
+    print(parts)
     filename = parts[-1]
     device = parts[-2]
     section = parts[-3]
 
-    if not file_key.endswith(dataframe_type):
-        target_key = f"{file_key}{dataframe_type}"
-    else:
-        target_key = file_key
+    key_file_stats = base_key+"_file_stats"
+    key_raw_data = base_key + "_raw_data"
 
-    if target_key in store.keys():
-        data = store[target_key]
+    data_file_stats = store[key_file_stats][()]
+    data_raw_data = store[key_raw_data][()]
 
-        # Debugging output for data preview
-        #print(f"\nData for key {file_key}:")
-        #print(data.head())
+    #convert data back to pd dataframe
 
-        # find all first files and store_path for later use
-        if filename.startswith('1-'):
-            return file_key, data
+    column_names_raw_data = ['voltage', 'current', 'abs_current', 'resistance', 'voltage_ps', 'current_ps',
+                             'voltage_ng','current_ng', 'log_Resistance', 'abs_Current_ps', 'abs_Current_ng',
+                             'current_Density_ps', 'current_Density_ng', 'electric_field_ps', 'electric_field_ng',
+                             'inverse_resistance_ps','inverse_resistance_ng', 'sqrt_Voltage_ps', 'sqrt_Voltage_ng',
+                             'classification']
 
+    column_names_file_stats = ['ps_area', 'ng_area', 'area', 'normalized_area', 'resistance_on_value',
+                               'resistance_off_value', 'ON_OFF_Ratio', 'voltage_on_value', 'voltage_off_value']
+
+    # Convert numpy arrays to pd dataframes
+    df_file_stats = pd.DataFrame(data_file_stats, columns=column_names_file_stats)
+    df_raw_data_temp = pd.DataFrame(data_raw_data, columns=column_names_raw_data)
+    df_raw_data = map_numbers_to_classification(df_raw_data_temp)
+
+    #print(df_file_stats)
+    #print(df_raw_data)
+
+    return df_raw_data,df_file_stats,parts
+
+
+
+def map_numbers_to_classification(df):
+    # Only apply the mapping if the 'classification' column exists in the dataframe
+    if 'classification' in df.columns:
+        reverse_classification_map = {
+            0: 'Memristive',
+            1: 'Capacitive',
+            2: 'Conductive',
+            3: 'Intermittent',
+            4: 'Mem-Capacitance',
+            5: 'Ohmic',
+            6: 'Non-Conductive'
+        }
+        df['classification'] = df['classification'].map(reverse_classification_map)
+    return df
 
 def filter_keys_by_suffix(keys, suffix):
     """
@@ -323,72 +330,5 @@ def filter_keys_by_suffix(keys, suffix):
     """
     return [key for key in keys if key.endswith(suffix)]
 
-
-
-
-
-
-
-
-
-
-# def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
-#     #with h5py.File(hdf5_file,'r') as store_path:
-#     start = time.time()
-#         #print(store_path)
-#     with h5py.File(hdf5_file, 'r') as store_path:
-#         # Group keys by depth
-#         print("a")
-#         grouped_keys = group_keys_by_level(store_path, max_depth=6)
-#         #print(store_path.get(hdf5_file))
-#
-#         #print(grouped_keys)
-#         #print("Grouped keys by depth:", grouped_keys)  # Debugging output to check the grouped keys
-#
-#         # Store the data on the first sweeps of all devices
-#         all_first_sweeps = []
-#
-#         # Analyze data at the lowest level (depth 6) only if necessary
-#         for key in grouped_keys[5]:
-#             print(key)
-#             results = analyze_at_file_level(key, store_path, dataframe_type)
-#             #print(results)
-#             if results is not None:
-#                 all_first_sweeps.append(results)
-#         middle = time.time()
-#         #print(all_first_sweeps) # Debug
-#         # First sweep data
-#         initial_resistance(all_first_sweeps)
-#         store_path.close()
-#
-#     print("time to organise the data before calling inisital first sweep " , middle-start)
-#
-# def group_keys_by_level(store_path, max_depth=6):
-#     """
-#     Group dataset keys by their depth in the hierarchy using h5py,
-#     while filtering out internal pandas storage structures.
-#         works kinda
-#     """
-#     grouped_keys = {depth: [] for depth in range(1, max_depth +1 )}
-#     ignored_suffixes = {'block0_items', 'block0_values', 'axis0', 'axis1',"block1_values","block1_items"}
-#
-#     #with h5py.File(hdf5_file, 'r') as store_path:
-#     def visit(name, obj):
-#         if isinstance(obj, h5py.Dataset):  # Only include dataset paths
-#             parts = name.strip('/').split('/')
-#             depth = len(parts)
-#
-#             # Check if the last part is one of the ignored suffixes
-#             if depth > 1 and parts[-1] in ignored_suffixes:
-#                 return
-#
-#             if depth <= max_depth:
-#                 grouped_keys[depth].append(name)
-#
-#     store_path.visititems(visit)
-#
-#     return grouped_keys
-
-
 # Run analysis on _metrics data
-analyze_hdf5_levels(hdf5_file, dataframe_type="_metrics")
+analyze_hdf5_levels(hdf5_file)

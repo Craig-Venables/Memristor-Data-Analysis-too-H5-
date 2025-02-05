@@ -1,4 +1,5 @@
 import pandas as pd
+import sys
 import h5py
 from equations import absolute_val, current_density_eq, resistance, electric_field_eq, inverse_resistance_eq, \
     sqrt_array, zero_devision_check,log_value,filter_positive_values,filter_negative_values
@@ -193,6 +194,13 @@ def save_to_hdf5(store_path, key_file_stats, key_raw_data, df_file_stats, df_raw
 
     structured_raw_data = dataframe_to_structured_array(df_raw_data)
     structured_file_stats = dataframe_to_structured_array(df_file_stats)
+
+    #print(structured_raw_data)
+
+    # print("now converting back")
+    # print("")
+    # column_names = ['voltage', 'current', 'abs_current', 'resistance', 'voltage_ps', 'current_ps', 'voltage_ng', 'current_ng', 'log_Resistance', 'abs_Current_ps', 'abs_Current_ng', 'current_Density_ps', 'current_Density_ng', 'electric_field_ps', 'electric_field_ng', 'inverse_resistance_ps', 'inverse_resistance_ng', 'sqrt_Voltage_ps', 'sqrt_Voltage_ng', 'classification']
+    # new_df = pd.DataFrame(structured_raw_data, columns=column_names
 
     with h5py.File(store_path, 'a') as f:
         # if key_raw_data in f:

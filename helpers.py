@@ -179,8 +179,8 @@ def check_if_file_exists(store_path, key):
 
 # Generate HDF5 keys for storing data
 def generate_hdf5_keys(material, sample, section, device, filename):
-    key_info = f'/{material}/{sample}/{section}/{device}/{filename}_info'
-    key_metrics = f'/{material}/{sample}/{section}/{device}/{filename}_metrics'
+    key_info = f'/{material}/{sample}/{section}/{device}/{filename}_file_stats'
+    key_metrics = f'/{material}/{sample}/{section}/{device}/{filename}_raw_data'
     return key_info, key_metrics
 
 
@@ -215,7 +215,10 @@ def map_classification_to_numbers(df):
 def dataframe_to_structured_array(df):
     # Map classification to numbers where applicable
     df = map_classification_to_numbers(df)
+    #print(list(df.columns))
 
     # Define the column data types, ensuring they are compatible with h5py
     dtype = [(col, str) if df[col].dtype == 'object' else (col, df[col].dtype) for col in df.columns]
-    return np.array(df, dtype=dtype)
+    #print(df)
+    return df.to_numpy()
+    #return np.array(df, dtype=dtype)
