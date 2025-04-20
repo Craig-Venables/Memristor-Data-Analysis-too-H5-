@@ -371,3 +371,248 @@ C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) 
 C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\5-fs-1.5v-0.001va.txt
 C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\6-fs-1.5v-0.01va.txt
 C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\7-fs-1.5v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\WS2\D16-0.1mgml-Gold-PVA(2%)-Gold-s9\F\10\1-FS_0.5v_0.01s.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\5-fs-2v-0.01sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\6-fs-2v-0.02sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\7-fs-2v-0.05sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\G\3\7-Fs_2v_0.1s.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D13-0.2mgml-Gold-PS(2%)-Gold-s6\K\1\16-FS_0.5v_0.01sv_Icc_1E-3 - cmr decreased to 100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D13-0.2mgml-Gold-PS(2%)-Gold-s6\K\1\17-FS_0.5v_0.01sv_Icc_1E-3 - cmr decreased to 100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\17 - Retention-1.5v-1000ms-0.15pv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\19-endurance-1.5,1v-30ms-0.15pv-reset .txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\19-endurance-1.5,1v-30ms-0.15pv-set.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D60-0.005mgml-ITO-PMMA(2%)-Gold-s9\G\10\ignore.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D66-0.005mgml-ITO-PMMA(3%)-Gold-s6\G\10\3-fs-1v-0.05sv-10pa.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\41-Endurance - smu_100-S(2.5_200ms)_R(-2.5_200ms).txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\43-fs-2.8v-0.05sv-0v.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\Observations.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D83-0.05mgml-ITO-PMMA(3%)-Gold-s5\G\3\38-fs-5v-0.1sv-100na-c1E-3-signore.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D87-0.05mgml-ITO-PMMA(3%)-ITO-s1\G\7\5-fs-8v-0.05sv-100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\1-fs-0.2v-0.001va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\1-fs-0.3v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\3-fs-0.3v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\5-fs-1.5v-0.001va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\6-fs-1.5v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\7-fs-1.5v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\WS2\D16-0.1mgml-Gold-PVA(2%)-Gold-s9\F\10\1-FS_0.5v_0.01s.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\5-fs-2v-0.01sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\6-fs-2v-0.02sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\7-fs-2v-0.05sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\G\3\7-Fs_2v_0.1s.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D13-0.2mgml-Gold-PS(2%)-Gold-s6\K\1\16-FS_0.5v_0.01sv_Icc_1E-3 - cmr decreased to 100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D13-0.2mgml-Gold-PS(2%)-Gold-s6\K\1\17-FS_0.5v_0.01sv_Icc_1E-3 - cmr decreased to 100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\17 - Retention-1.5v-1000ms-0.15pv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\19-endurance-1.5,1v-30ms-0.15pv-reset .txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\19-endurance-1.5,1v-30ms-0.15pv-set.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D60-0.005mgml-ITO-PMMA(2%)-Gold-s9\G\10\ignore.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D66-0.005mgml-ITO-PMMA(3%)-Gold-s6\G\10\3-fs-1v-0.05sv-10pa.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\41-Endurance - smu_100-S(2.5_200ms)_R(-2.5_200ms).txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\43-fs-2.8v-0.05sv-0v.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\50 - Endurance-pmu-2000_S(-2.8v_10ns)_R(2.8v_10ns)_M(0.3v_5E-6).txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\Observations.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D83-0.05mgml-ITO-PMMA(3%)-Gold-s5\G\3\38-fs-5v-0.1sv-100na-c1E-3-signore.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D87-0.05mgml-ITO-PMMA(3%)-ITO-s1\G\7\5-fs-8v-0.05sv-100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\1-fs-0.2v-0.001va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\1-fs-0.3v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\3-fs-0.3v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\5-fs-1.5v-0.001va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\6-fs-1.5v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\7-fs-1.5v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\WS2\D16-0.1mgml-Gold-PVA(2%)-Gold-s9\F\10\1-FS_0.5v_0.01s.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\82\H\1\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\82\H\3\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\82\H\4\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\82\H\5\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\82\H\6\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\5-fs-2v-0.01sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\6-fs-2v-0.02sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\7-fs-2v-0.05sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\G\3\7-Fs_2v_0.1s.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D13-0.2mgml-Gold-PS(2%)-Gold-s6\K\1\16-FS_0.5v_0.01sv_Icc_1E-3 - cmr decreased to 100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D13-0.2mgml-Gold-PS(2%)-Gold-s6\K\1\17-FS_0.5v_0.01sv_Icc_1E-3 - cmr decreased to 100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\17 - Retention-1.5v-1000ms-0.15pv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\19-endurance-1.5,1v-30ms-0.15pv-reset .txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\19-endurance-1.5,1v-30ms-0.15pv-set.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D60-0.005mgml-ITO-PMMA(2%)-Gold-s9\G\10\ignore.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D66-0.005mgml-ITO-PMMA(3%)-Gold-s6\G\10\3-fs-1v-0.05sv-10pa.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\41-Endurance - smu_100-S(2.5_200ms)_R(-2.5_200ms).txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\43-fs-2.8v-0.05sv-0v.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\50 - Endurance-pmu-2000_S(-2.8v_10ns)_R(2.8v_10ns)_M(0.3v_5E-6).txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\53 - retention-pmu-R(2.8v_0.0001s)_M(0.2v_1E-6)_cr1E-6.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\57- retention-pmu-R(-2.8v_10E-6s)_M(-0.2v_10E-9)_cr1E-6.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\63- retention-pmu-R(2.8v_10E-6s)_M(0.2v_100E-9)_cr10E-9.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\75- retention-pmu-R(-2.8v_10E-6s)_M(0.3v_1E-6)_cr100E-9  x10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\76- retention-pmu-R(-2.8v_10E-6s)_M(0.3v_1E-6)_cr100E-9  x10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\Observations.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\10\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\2\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\3\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\4\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\5\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\6\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\7\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\8\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\9\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\10_FS_2.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\11_FS_2.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\12_FS_2.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\13_FS_2.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\14_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\15_FS_1.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\16_FS_1.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\17_FS_0.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\18_FS_0.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\19_FS_0.3v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\1_FS_0.1v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\20_FS_0.2v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\21_FS_0.1v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\22_PS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\23_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\24_NS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\25_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\2_FS_0.2v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\3_FS_0.3v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\4_FS_0.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\5_FS_0.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\6_FS_1.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\7_FS_1.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\8_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\H\1\9_FS_1.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\10_FS_2.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\11_FS_2.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\12_FS_2.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\13_FS_2.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\14_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\15_FS_1.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\16_FS_1.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\17_FS_0.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\18_FS_0.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\19_FS_0.3v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\1_FS_0.1v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\20_FS_0.2v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\21_FS_0.1v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\22_PS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\23_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\24_NS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\25_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\26_FS_1.5v-0.05sv-0.05sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\27_FS_1.5v-0.05sv-0.01sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\28_FS_2v-0.05sv-0.05sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\29_FS_2v-0.05sv-0.01sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\2_FS_0.2v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\30_FS_2.5v-0.05sv-0.05sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\31_FS_2.5v-0.05sv-0.01sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\3_FS_0.3v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\4_FS_0.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\5_FS_0.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\6_FS_1.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\7_FS_1.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\8_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81\J\1\9_FS_1.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D83-0.05mgml-ITO-PMMA(3%)-Gold-s5\G\3\38-fs-5v-0.1sv-100na-c1E-3-signore.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D87-0.05mgml-ITO-PMMA(3%)-ITO-s1\G\7\5-fs-8v-0.05sv-100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\1-fs-0.2v-0.001va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\1-fs-0.3v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\3-fs-0.3v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\5-fs-1.5v-0.001va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\6-fs-1.5v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\7-fs-1.5v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\WS2\D16-0.1mgml-Gold-PVA(2%)-Gold-s9\F\10\1-FS_0.5v_0.01s.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\5-fs-2v-0.01sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\6-fs-2v-0.02sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\F\3\7-fs-2v-0.05sv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D10-0.2mgml-Gold-PMMA(2%)-Gold-s3\G\3\7-Fs_2v_0.1s.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D13-0.2mgml-Gold-PS(2%)-Gold-s6\K\1\16-FS_0.5v_0.01sv_Icc_1E-3 - cmr decreased to 100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D13-0.2mgml-Gold-PS(2%)-Gold-s6\K\1\17-FS_0.5v_0.01sv_Icc_1E-3 - cmr decreased to 100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\17 - Retention-1.5v-1000ms-0.15pv.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\19-endurance-1.5,1v-30ms-0.15pv-reset .txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D33-0.07mgml-Gold-PS(2%)-Gold-s4\G\7\19-endurance-1.5,1v-30ms-0.15pv-set.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D60-0.005mgml-ITO-PMMA(2%)-Gold-s9\G\10\ignore.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D66-0.005mgml-ITO-PMMA(3%)-Gold-s6\G\10\3-fs-1v-0.05sv-10pa.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\41-Endurance - smu_100-S(2.5_200ms)_R(-2.5_200ms).txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\43-fs-2.8v-0.05sv-0v.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\50 - Endurance-pmu-2000_S(-2.8v_10ns)_R(2.8v_10ns)_M(0.3v_5E-6).txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\53 - retention-pmu-R(2.8v_0.0001s)_M(0.2v_1E-6)_cr1E-6.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\57- retention-pmu-R(-2.8v_10E-6s)_M(-0.2v_10E-9)_cr1E-6.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\63- retention-pmu-R(2.8v_10E-6s)_M(0.2v_100E-9)_cr10E-9.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\75- retention-pmu-R(-2.8v_10E-6s)_M(0.3v_1E-6)_cr100E-9  x10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\76- retention-pmu-R(-2.8v_10E-6s)_M(0.3v_1E-6)_cr100E-9  x10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\G\6\Observations.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\10\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\2\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\3\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\4\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\5\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\6\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\7\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\8\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D80-0.1mgml-ITO-PMMA(2%)-Gold-s2\H\9\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\10_FS_2.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\11_FS_2.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\12_FS_2.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\13_FS_2.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\14_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\15_FS_1.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\16_FS_1.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\17_FS_0.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\18_FS_0.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\19_FS_0.3v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\1_FS_0.1v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\20_FS_0.2v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\21_FS_0.1v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\22_PS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\23_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\24_NS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\25_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\2_FS_0.2v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\3_FS_0.3v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\4_FS_0.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\5_FS_0.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\6_FS_1.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\7_FS_1.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\8_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\H\1\9_FS_1.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\10_FS_2.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\11_FS_2.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\12_FS_2.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\13_FS_2.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\14_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\15_FS_1.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\16_FS_1.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\17_FS_0.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\18_FS_0.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\19_FS_0.3v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\1_FS_0.1v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\20_FS_0.2v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\21_FS_0.1v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\22_PS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\23_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\24_NS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\25_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\26_FS_1.5v-0.05sv-0.05sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\27_FS_1.5v-0.05sv-0.01sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\28_FS_2v-0.05sv-0.05sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\29_FS_2v-0.05sv-0.01sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\2_FS_0.2v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\30_FS_2.5v-0.05sv-0.05sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\31_FS_2.5v-0.05sv-0.01sd-Py-10.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\3_FS_0.3v-0.01sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\4_FS_0.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\5_FS_0.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\6_FS_1.0v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\7_FS_1.2v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\8_FS_1.5v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D81-0.07mgml-ITO-PMMA(3%)-Gold-s3\J\1\9_FS_1.8v-0.05sv-0.05sd-Py-3.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D82-0.07mgml-ITO-PMMA(2%)-Gold-s4\H\1\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D82-0.07mgml-ITO-PMMA(2%)-Gold-s4\H\3\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D82-0.07mgml-ITO-PMMA(2%)-Gold-s4\H\4\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D82-0.07mgml-ITO-PMMA(2%)-Gold-s4\H\5\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D82-0.07mgml-ITO-PMMA(2%)-Gold-s4\H\6\log.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D83-0.05mgml-ITO-PMMA(3%)-Gold-s5\G\3\38-fs-5v-0.1sv-100na-c1E-3-signore.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Quantum Dots\Zn-Cu-In-S(Zns)\D87-0.05mgml-ITO-PMMA(3%)-ITO-s1\G\7\5-fs-8v-0.05sv-100na.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\1-fs-0.2v-0.001va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\1-fs-0.3v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA\D17-Stock-Gold-PMMA(0.25%)-Gold-s1\G\2\3-fs-0.3v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\5-fs-1.5v-0.001va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\6-fs-1.5v-0.01va.txt
+C:\Users\Craig-Desktop\OneDrive - The University of Nottingham\Documents\Phd\2) Data\1) Devices\1) Memristors\Stock\PMMA-PVA\D18-Stock-Gold-PMMA(0.25%)-PVA(2%)-Gold-s2-1B\F 100μm\1\7-fs-1.5v-0.01va.txt

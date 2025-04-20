@@ -157,13 +157,40 @@ def handle_single_sweep(df, file_info, device_path, plot_graph, re_save_graph):
 
     return None, None, df_file_stats
 
+#def read_file_to_dataframe(file):
+
+    # try:
+    #     df = pd.read_csv(file, sep='\s+', header=0)
+    #     if 'voltage current' in df.columns:
+    #         df[['voltage', 'current']] = df['voltage current'].str.split(expand=True)
+    #         df.drop(columns=['voltage current'], inplace=True)
+    #     return df
+    # except Exception as e:
+    #     print(f"Error reading file {file}: {e}")
+    #     return None
+
 def read_file_to_dataframe(file):
     try:
         df = pd.read_csv(file, sep='\s+', header=0)
-        if 'voltage current' in df.columns:
-            df[['voltage', 'current']] = df['voltage current'].str.split(expand=True)
-            df.drop(columns=['voltage current'], inplace=True)
+
+        # Normalize column names to lowercase for consistency
+        df.columns = [col.lower() for col in df.columns]
+
+        # Find the column that contains 'voltage' and 'current'
+        target_col = next((col for col in df.columns if 'voltage' in col and 'current' in col), None)
+
+        if target_col:
+            split_values = df[target_col].str.split(expand=True)
+
+            if "time" in target_col:
+                df[['voltage', 'current', 'time']] = split_values.iloc[:, :3]  # Extract first 3 columns
+            else:
+                df[['voltage', 'current']] = split_values.iloc[:, :2]  # Extract first 2 columns
+
+            df.drop(columns=[target_col], inplace=True)  # Drop the original combined column
+
         return df
+
     except Exception as e:
         print(f"Error reading file {file}: {e}")
         return None

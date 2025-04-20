@@ -11,6 +11,8 @@ from tables import NaturalNameWarning
 from excell import save_info_from_solution_devices_excell,save_info_from_device_into_excell
 import warnings
 
+"Process raw data "
+
 # what should the code do
 calculate_raw = True  # All raw files
 calculate_currated = False # Statistical analysis on curated files.
@@ -58,6 +60,7 @@ def process_files_raw(txt_files, base_dir, store_path):
 
         if depth != 6:
             continue
+        #print(file, i)
         #print(relative_path)
         # Extract file information
         filename, device, section, sample, material, nano_particles = extract_file_info(relative_path)
@@ -76,8 +79,10 @@ def process_files_raw(txt_files, base_dir, store_path):
             print(f"Moving on to new sample: {sample}")
             device_fab_info = save_info_from_solution_devices_excell(sample,solution_devices_excell_path)
             device_fab_key = f'/{material}/{sample}_fabrication'
-            # if device_fab_info is not None and not device_fab_info.empty:
-            #     store_path.put(device_fab_key, device_fab_info)
+
+            # calculate yield here
+            key_device_yield = f'/{material}/{sample}_yield'
+            #df_yield =
 
         # Check if the sweep type is known and/or if the file is a dud
         # returns 'iv_sweep' or None
@@ -254,7 +259,7 @@ def main(base_dir,base_currated,calculate_raw,calculate_currated,save_location):
 
     if calculate_raw:
         # Process all raw files
-        path = save_location/'Memristor_data.h5'
+        path = save_location/'Memristor_data24.03.25.h5'
         with h5py.File(path,'a') :
             process_files_raw(txt_files_base, base_dir, path)
 

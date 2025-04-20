@@ -112,6 +112,7 @@ def check_sweep_type(filepath, output_file):
             ['voltage', 'current'],
             ['vOLTAGE', 'cURRENT'],
             ['VSOURC - Plot 0', 'IMEAS - Plot 0'],
+            ['Voltage', 'Current', 'Time'],
             ['VSOURC - Plot 0\tIMEAS - Plot 0'],
         ],
         'Endurance': ['Iteration #', 'Time (s)', 'Resistance (Set)', 'Set Voltage', 'Time (s)', 'Resistance (Reset)', 'Reset Voltage'],
