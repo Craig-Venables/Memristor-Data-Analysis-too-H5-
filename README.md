@@ -1,4 +1,4 @@
-# Memristor Data Analysis Pipeline
+# Memristor Data Analysis H5 - Too h5 file
 
 ## Overview
 This project implements a comprehensive data analysis pipeline for processing and analyzing memristor device measurements. The pipeline handles raw data files, performs various calculations, and stores the processed data in HDF5 format.
