@@ -9,7 +9,7 @@ hdf5_file = '../memristor_data.h5'
 
 def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
     """
-    Analyze data from an HDF5 file by grouping keys by depth and processing the data.
+    Analyze data_analyzer.py from an HDF5 file by grouping keys by depth and processing the data_analyzer.py.
     """
     with h5py.File(hdf5_file, 'r') as store:
         def print_structure(name, obj):
@@ -22,10 +22,10 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
         grouped_keys = group_keys_by_level(store, max_depth=6)
         #print("Grouped keys by depth:", grouped_keys)  # Debugging output to check the grouped keys
 
-        # Store the data on the first sweeps of all devices
+        # Store the data_analyzer.py on the first sweeps of all devices
         all_first_sweeps = []
 
-        # Analyze data at the lowest level (depth 6) only if necessary
+        # Analyze data_analyzer.py at the lowest level (depth 6) only if necessary
         if 5 in grouped_keys:  # Ensure depth 6 exists
             for key in grouped_keys[5]:
                 #print(f"Analyzing key: {key}")
@@ -34,7 +34,7 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
                 if results is not None:
                     all_first_sweeps.append(results)
 
-        # Perform analysis on the first sweep data
+        # Perform analysis on the first sweep data_analyzer.py
         initial_resistance(all_first_sweeps)
 
 
@@ -236,6 +236,6 @@ def filter_keys_by_suffix(keys, suffix):
     return [key for key in keys if key.endswith(suffix)]
 
 
-# Run analysis on _metrics data
+# Run analysis on _metrics data_analyzer.py
 if __name__ == "__main__":
     analyze_hdf5_levels(hdf5_file, dataframe_type="_metrics")

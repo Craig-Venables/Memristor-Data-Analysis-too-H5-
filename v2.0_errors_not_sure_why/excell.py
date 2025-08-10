@@ -148,6 +148,7 @@ def save_info_from_device_into_excell(device_name, device_fol_location):
 
     :return: Saves device parameters as a data_analyzer.py frame
     '''
+    # Support Path or str for folder
     folder_path = Path(device_fol_location)
     excel_path = folder_path / f"{device_name}.xlsx"
     # print(excel_path)

@@ -9,7 +9,7 @@ def get_data_for_keys(store, keys):
     - keys: list of dataset keys (paths in the HDF5 file)
 
     Returns:
-    - Dictionary where keys are dataset paths and values are the stored data
+    - Dictionary where keys are dataset paths and values are the stored data_analyzer.py
     """
     data_dict = {}
     for key in keys:
@@ -24,7 +24,7 @@ with h5py.File("pd55.h5", "r") as store:
     keys_at_depth_6 = [...]  # Your list of keys at depth 6
     data_dict = get_data_for_keys(store, keys_at_depth_6)
 
-# Print keys and data information
+# Print keys and data_analyzer.py information
 for key, data in data_dict.items():
     print(f"Key: {key}, Data Shape: {data.shape if hasattr(data, 'shape') else 'scalar'}, Type: {type(data)}")
     print(data)

@@ -14,7 +14,7 @@ def file_analysis(df, plot_graph, save_df, device_path, re_save_graph, short_nam
 
     # You already have the DataFrame passed in, so no need to read it from the file
     #print(f"Columns in the DataFrame: {df.columns}")
-    # Step 1: Preprocess voltage and current data from the passed DataFrame
+    # Step 1: Preprocess voltage and current data_analyzer.py from the passed DataFrame
     v_data = df['voltage']
     c_data = df['current']
 
@@ -36,7 +36,7 @@ def file_analysis(df, plot_graph, save_df, device_path, re_save_graph, short_nam
     else:
         _, _, df_file_stats = handle_single_sweep(metrics_df, None, device_path, plot_graph, re_save_graph)
 
-    # Return both DataFrames (raw data and metrics) for saving in main
+    # Return both DataFrames (raw data_analyzer.py and metrics) for saving in main
     return df_file_stats, metrics_df
 
 def file_analysis_endurance():
@@ -76,7 +76,7 @@ def create_device_dataframe(v_data, c_data, v_data_ps, c_data_ps, v_data_ng, c_d
 
 
 def split_loops(v_data, c_data, num_loops):
-    """ Splits looped data and outputs each sweep as another array """
+    """ Splits looped data_analyzer.py and outputs each sweep as another array """
     total_length = len(v_data)  # Assuming both v_data and c_data have the same length
     size = total_length // num_loops  # Calculate the size based on the number of loops
 
@@ -96,7 +96,7 @@ def split_loops(v_data, c_data, num_loops):
 def handle_multiple_sweeps(df, num_sweeps, device_path, file_info, plot_graph, re_save_graph):
     """ Handle logic for multiple sweeps """
 
-    # Split loop data
+    # Split loop data_analyzer.py
     split_v_data, split_c_data = split_loops(df['voltage'], df['current'], num_sweeps)
 
     # Calculate metrics for multiple sweeps
@@ -189,6 +189,15 @@ def read_file_to_dataframe(file):
 
             df.drop(columns=[target_col], inplace=True)  # Drop the original combined column
 
+        # Ensure numeric dtypes for downstream computations
+        for col in ['voltage', 'current', 'time']:
+            if col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors='coerce')
+
+        # Drop rows where voltage or current are NaN after conversion
+        if 'voltage' in df.columns and 'current' in df.columns:
+            df = df.dropna(subset=['voltage', 'current'])
+
         return df
 
     except Exception as e:
@@ -216,33 +225,31 @@ def analyze_file(sweep_type, analysis_params):
 
 
 def save_to_hdf5(store_path, key_file_stats, key_raw_data, df_file_stats, df_raw_data):
-    # df_raw_data = map_classification_to_numbers(df_raw_data)
-    # df_file_stats = map_classification_to_numbers(df_file_stats)
+    """Save metrics and raw dataframes into HDF5 at the given keys.
+
+    If datasets already exist, they are overwritten.
+    """
+    if df_raw_data is None or df_file_stats is None:
+        return
 
     structured_raw_data = dataframe_to_structured_array(df_raw_data)
     structured_file_stats = dataframe_to_structured_array(df_file_stats)
 
-    #print(structured_raw_data)
-
-    # print("now converting back")
-    # print("")
-    # column_names = ['voltage', 'current', 'abs_current', 'resistance', 'voltage_ps', 'current_ps', 'voltage_ng', 'current_ng', 'log_Resistance', 'abs_Current_ps', 'abs_Current_ng', 'current_Density_ps', 'current_Density_ng', 'electric_field_ps', 'electric_field_ng', 'inverse_resistance_ps', 'inverse_resistance_ng', 'sqrt_Voltage_ps', 'sqrt_Voltage_ng', 'classification']
-    # new_df = pd.DataFrame(structured_raw_data, columns=column_names
+    if structured_raw_data is None or structured_file_stats is None:
+        return
 
     with h5py.File(store_path, 'a') as f:
-        # if key_raw_data in f:
-        #     del f[key_raw_data]
+        if key_raw_data in f:
+            del f[key_raw_data]
         f.create_dataset(key_raw_data, data=structured_raw_data, compression="gzip", dtype=structured_raw_data.dtype)
 
-        # if key_file_stats in f:
-        #     del f[key_file_stats]
+        if key_file_stats in f:
+            del f[key_file_stats]
         f.create_dataset(key_file_stats, data=structured_file_stats, compression="gzip",
                          dtype=structured_file_stats.dtype)
 
-    #print("Data successfully saved to HDF5!")
 
-
-# Save raw data and metrics to HDF5
+# Save raw data_analyzer.py and metrics to HDF5
 # def save_to_hdf5(store_path, key_raw, key_metrics, df_file_stats, df_raw_data):
 #     # print("key_metrics" , key_metrics)
 #     # print("key_raw",key_raw
@@ -251,8 +258,8 @@ def save_to_hdf5(store_path, key_file_stats, key_raw_data, df_file_stats, df_raw
 #     structured_raw_data = dataframe_to_structured_array(df_raw_data)
 #
 #     with h5py.File("C:/temp/memristor_data2.h5", "w") as f:
-#         f.create_dataset("raw_data", data=structured_raw_data, compression="gzip")
-#         f.create_dataset("file_stats", data=structured_file_stats, compression="gzip")
+#         f.create_dataset("raw_data", data_analyzer.py=structured_raw_data, compression="gzip")
+#         f.create_dataset("file_stats", data_analyzer.py=structured_file_stats, compression="gzip")
 #
 #     # if df_file_stats is not None and not df_file_stats.empty:
 #     #     store_path.put(key_raw, df_file_stats)

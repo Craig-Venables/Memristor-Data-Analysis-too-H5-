@@ -121,9 +121,9 @@ def on_off_values(voltage_data, current_data):
     """
     Calculates r on off and v on off values for an individual device
     """
-    # Convert DataFrame columns to lists
-    voltage_data = voltage_data.to_numpy()
-    current_data = current_data.to_numpy()
+    # Ensure NumPy arrays
+    voltage_data = np.asarray(voltage_data)
+    current_data = np.asarray(current_data)
     # Initialize lists to store_path Ron and Roff values
     resistance_on_value = []
     resistance_off_value = []

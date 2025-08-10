@@ -14,36 +14,24 @@ def check_for_loops(v_data):
     :param v_data:
     :return: number of loops for given data_analyzer.py set
     """
-    # looks at max voltage and min voltage if they are seen more than twice it classes it as a loop
-    # checks for the number of zeros 3 = single loop
-    num_max = 0
-    num_min = 0
-    num_zero = 0
-    max_v, min_v = bounds(v_data)
-    max_v_2 = max_v / 2
-    min_v_2 = min_v / 2
-
-    # 4 per sweep
-    for value in v_data:
-        if value == max_v_2:
-            num_max += 1
-        if value == min_v_2:
-            num_min += 1
-        if value == 0:
-            num_zero += 1
-    # print(num_min)
-
-    # print("num zero", num_zero)
-    if num_max + num_min == 4:
-        # print("single sweep")
+    # Tolerant heuristic: count zero-crossings of the derivative of voltage
+    v = np.asarray(v_data, dtype=float)
+    if v.size < 4:
         return 1
-    if num_max + num_min == 2:
-        # print("half_sweep", num_max, num_min)
-        return 0.5
-    else:
-        # print("multiloop", (num_max + num_min) / 4)
-        loops = (num_max + num_min) / 4
-        return loops
+    # Identify turning points by sign change in dv
+    dv = np.diff(v)
+    # Avoid exact zero sensitivity
+    eps = max(1e-9, 1e-6 * (np.max(np.abs(v)) or 1.0))
+    dv[np.abs(dv) < eps] = 0.0
+    sign = np.sign(dv)
+    # Count changes between + and - ignoring zeros
+    nonzero = sign[sign != 0]
+    if nonzero.size == 0:
+        return 1
+    turns = np.sum(nonzero[1:] * nonzero[:-1] < 0)
+    # A single loop typically ~3 turning points (up, down, up or reverse)
+    estimated_loops = max(1, int(round(turns / 3)))
+    return estimated_loops
 
 def extract_folder_names(filepath):
     """ Extract folder names or file metadata from the filepath. """

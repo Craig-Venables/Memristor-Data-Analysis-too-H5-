@@ -1,0 +1,6 @@
+device_number,concentration,bottom_electrode,polymer,polymer_percent,top_electrode,average_resistance,classification,key
+D10,0.2,Gold,PMMA,2,Gold,11.304270089299262,Memristive,Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/4/1-Fs_0.8v_0.01s.txt
+D10,0.2,Gold,PMMA,2,Gold,12.417516200339639,Memristive,Zn-Cu-In-S(Zns)/D10-0.2mgml-Gold-PMMA(2%)-Gold-s3/G/5/1-Fs_0.8v_0.01s.txt
+D59,0.05,ITO,PMMA,2,Gold,7090213.01539714,Memristive,Zn-Cu-In-S(Zns)/D59-0.05mgml-ITO-PMMA(2%)-Gold-s8/G/1/1-fs-1v-0.05sv-100na.txt
+D65,0.05,ITO,PMMA,3,Gold,14877497.87316606,Memristive,Zn-Cu-In-S(Zns)/D65-0.05mgml-ITO-PMMA(3%)-Gold-s5/G/10/1-fs-1v-0.05sv-100na.txt
+D65,0.05,ITO,PMMA,3,Gold,14877497.87316606,Memristive,Zn-Cu-In-S(Zns)/D65-0.05mgml-ITO-PMMA(3%)-Gold-s5/H/10/1-fs-1v-0.05sv-100na.txt

@@ -13,14 +13,14 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
         # Group keys by depth
         grouped_keys = group_keys_by_level(store, max_depth=6)
         second = time.time()
-        # Analyze data at the lowest level (depth 6)
+        # Analyze data_analyzer.py at the lowest level (depth 6)
         all_first_sweeps = []
 
         # go through each key
         for key in grouped_keys[5]:
 
             # Analysis at the file level
-            # Pull the first sweep from all the data
+            # Pull the first sweep from all the data_analyzer.py
             first_sweep_data = find_first_sweep(key, store, dataframe_type)
             if first_sweep_data is not None:
                 all_first_sweeps.append(first_sweep_data)
@@ -28,7 +28,7 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
 
 
         third = time.time()
-        # Combine all first sweep data and plot
+        # Combine all first sweep data_analyzer.py and plot
         if all_first_sweeps:
             combined_data = pd.concat(all_first_sweeps, ignore_index=True)
             plot_first_sweep_data(combined_data)
@@ -36,7 +36,7 @@ def analyze_hdf5_levels(hdf5_file, dataframe_type="_info"):
 
     print("total time = " ,third-start)
     print("time to sort keys",second-start)
-    print("time too loop through data,", third-second)
+    print("time too loop through data_analyzer.py,", third-second)
 
 
 def group_keys_by_level(store, max_depth=6):
@@ -78,7 +78,7 @@ def get_first_sweep_data(data):
     if "resistance" in data.columns:
         return data
     else:
-        print("No resistance data found in the provided DataFrame.")
+        print("No resistance data_analyzer.py found in the provided DataFrame.")
         return None
 
 
@@ -88,7 +88,7 @@ def plot_first_sweep_data(data):
     """
 
     print(data)
-    #Assuming a 'concentration' column exists in the data
+    #Assuming a 'concentration' column exists in the data_analyzer.py
     if "concentration" in data.columns:
         plt.figure(figsize=(10, 6))
         for conc, group in data.groupby("concentration"):
@@ -100,8 +100,8 @@ def plot_first_sweep_data(data):
         plt.grid()
         plt.show()
     else:
-        print("No 'concentration' column in data. Cannot plot.")
+        print("No 'concentration' column in data_analyzer.py. Cannot plot.")
 
 
-# Analyze all _metrics data at each level
+# Analyze all _metrics data_analyzer.py at each level
 analyze_hdf5_levels(hdf5_file, dataframe_type="_metrics")

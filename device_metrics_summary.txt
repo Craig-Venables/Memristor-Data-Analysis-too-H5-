@@ -1,0 +1,100 @@
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: F
+Device: 1
+Total Files Processed: 42
+Total Sweeps: 42
+--- Metrics Summary ---
+        ps_area       ng_area          area  normalized_area  resistance_on_value  resistance_off_value  ON_OFF_Ratio  voltage_on_value  voltage_off_value
+0 -6.186500e-11  1.032190e-10  4.135400e-11     2.067700e-11         2.064320e+08          6.622517e+06      31.17123              -0.2               0.22
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: F
+Device: 10
+Total Files Processed: 23
+Total Sweeps: 23
+--- Metrics Summary ---
+        ps_area       ng_area          area  normalized_area  resistance_on_value  resistance_off_value  ON_OFF_Ratio  voltage_on_value  voltage_off_value
+0  6.230446e-12 -5.140060e-13  5.716440e-12     1.587900e-12         7.957560e+12          3.403676e+09   2337.931034             -0.12               1.78
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: F
+Device: 2
+Total Files Processed: 36
+Total Sweeps: 36
+--- Metrics Summary ---
+        ps_area       ng_area          area  normalized_area  resistance_on_value  resistance_off_value  ON_OFF_Ratio  voltage_on_value  voltage_off_value
+0  4.464800e-11  2.081320e-10  2.527800e-10     1.263900e-10         2.380058e+08          5.854801e+06     40.651384              -0.2               0.22
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: F
+Device: 3
+Total Files Processed: 17
+Total Sweeps: 17
+--- Metrics Summary ---
+    ps_area   ng_area      area  normalized_area  resistance_on_value  resistance_off_value  ON_OFF_Ratio  voltage_on_value  voltage_off_value
+0  0.000034  0.001833  0.001867         0.000934             25.93361             25.759918      1.006743              0.95               0.05
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: F
+Device: 4
+Total Files Processed: 28
+Total Sweeps: 28
+--- Metrics Summary ---
+        ps_area       ng_area          area  normalized_area  resistance_on_value  resistance_off_value  ON_OFF_Ratio  voltage_on_value  voltage_off_value
+0  5.750000e-12  8.937500e-12  1.468750e-11     9.179688e-12         1.474926e+08          6.692545e+07      2.203835             -0.35                0.2
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: F
+Device: 5
+Total Files Processed: 17
+Total Sweeps: 17
+--- Metrics Summary ---
+        ps_area       ng_area          area  normalized_area  resistance_on_value  resistance_off_value  ON_OFF_Ratio  voltage_on_value  voltage_off_value
+0  7.090020e-12 -1.043636e-11 -3.346343e-12    -2.091465e-12         6.211180e+10          4.420866e+09     14.049689              -0.7               0.75
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: F
+Device: 6
+Total Files Processed: 3
+Total Sweeps: 3
+--- Metrics Summary ---
+        ps_area       ng_area          area  normalized_area  resistance_on_value  resistance_off_value  ON_OFF_Ratio  voltage_on_value  voltage_off_value
+0  5.700220e-12 -6.524125e-12 -8.239050e-13    -5.149406e-13         5.530973e+11          6.140997e+09     90.066372             -0.35                0.8
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: F
+Device: 7
+Total Files Processed: 13
+Total Sweeps: 13
+--- Metrics Summary ---
+    ps_area   ng_area     area  normalized_area  resistance_on_value  resistance_off_value  ON_OFF_Ratio  voltage_on_value  voltage_off_value
+0 -0.000533  0.002123  0.00159         0.000795            24.108004             23.094688      1.043877               1.0               0.95
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: F
+Device: 8
+Total Files Processed: 13
+Total Sweeps: 13
+--- Metrics Summary ---
+        ps_area       ng_area          area  normalized_area  resistance_on_value  resistance_off_value  ON_OFF_Ratio  voltage_on_value  voltage_off_value
+0  7.040000e-11  9.441750e-11  1.648175e-10     8.240875e-11         1.411101e+08          5.697356e+07      2.476764             -0.15                0.3
+
+Material: Zn-Cu-In-S(Zns)
+Sample: D10-0.2mgml-Gold-PMMA(2%)-Gold-s3
+Section: F
+Device: 9
+Total Files Processed: 14
+Total Sweeps: 14
+--- Metrics Summary ---
+    ps_area   ng_area      area  normalized_area  resistance_on_value  resistance_off_value  ON_OFF_Ratio  voltage_on_value  voltage_off_value
+0  0.000019  0.002153  0.002173         0.001358            17.391304             17.277125      1.006609              -0.7               0.05
+

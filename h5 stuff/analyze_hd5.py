@@ -22,7 +22,7 @@ def analyze_hdf5_levels(hdf5_file):
         grouped_keys = get_keys_at_depth(store, target_depth=5)
         print(grouped_keys)
 
-        # Store the data on the first sweeps of all devices
+        # Store the data_analyzer.py on the first sweeps of all devices
         all_first_sweeps = []
         all_second_sweeps = []
         all_third_sweeps = []
@@ -32,7 +32,7 @@ def analyze_hdf5_levels(hdf5_file):
         # Extract base keys by removing suffixes and co
         base_keys = sorted(set(k.rsplit('_', 2)[0] for k in grouped_keys))
 
-        # Analyze data for each file!
+        # Analyze data_analyzer.py for each file!
         for base_key in base_keys:
             print(base_key)
 
@@ -57,15 +57,15 @@ def analyze_hdf5_levels(hdf5_file):
         middle = time.time()
 
         print(all_first_sweeps)
-        # First sweep data
+        # First sweep data_analyzer.py
         initial_resistance(all_first_sweeps)
         store.close()
 
-    print("time to organise the data before calling inisital first sweep ", middle - start)
+    print("time to organise the data_analyzer.py before calling inisital first sweep ", middle - start)
 
 def initial_resistance(data,voltage_val = 0.1):
     """ Finds the initial reseistance between 0-0.1 V for the list of values given
-        also filters for data that's not within the list valid_classifications to remove unwanted data
+        also filters for data_analyzer.py that's not within the list valid_classifications to remove unwanted data_analyzer.py
     """
 
     resistance_results = []
@@ -75,7 +75,7 @@ def initial_resistance(data,voltage_val = 0.1):
     valid_classifications = ["Memristive", "Ohmic","Conductive","intermittent","Mem-Capacitance"]  # Add more classifications here as needed
     valid_classifications = ["Memristive"]
     for key, value in data:
-        """value = all the data (metrics_df)
+        """value = all the data_analyzer.py (metrics_df)
             key = folder structure"""
         #print('value',value)
         # print(f"\nAnalyzing key: {key}")  # Debugging print for each key
@@ -102,13 +102,13 @@ def initial_resistance(data,voltage_val = 0.1):
 
 
         if classification in valid_classifications:
-            # only work on data that shows memristive or ohmic behaviour
-            # Filter data
+            # only work on data_analyzer.py that shows memristive or ohmic behaviour
+            # Filter data_analyzer.py
             # Calculate resistance between the values of V
             resistance_data = value[(value['voltage'] >= 0) & (value['voltage'] <= voltage_val)]['resistance']
             resistance = resistance_data.mean()
 
-            # calculate gradient of line for the data to see difference
+            # calculate gradient of line for the data_analyzer.py to see difference
 
             if resistance <0:
                 print("check file as classification wrong - negative resistance seen on device")
@@ -272,7 +272,7 @@ def get_keys_at_depth(store, target_depth=5):
 
 def return_data(base_key, store):
     """
-    Given the file key return the data in a pd dataframe converting form numpy array
+    Given the file key return the data_analyzer.py in a pd dataframe converting form numpy array
     """
     parts = base_key.strip('/').split('/')
     print(parts)
@@ -286,7 +286,7 @@ def return_data(base_key, store):
     data_file_stats = store[key_file_stats][()]
     data_raw_data = store[key_raw_data][()]
 
-    #convert data back to pd dataframe
+    #convert data_analyzer.py back to pd dataframe
 
     column_names_raw_data = ['voltage', 'current', 'abs_current', 'resistance', 'voltage_ps', 'current_ps',
                              'voltage_ng','current_ng', 'log_Resistance', 'abs_Current_ps', 'abs_Current_ng',
@@ -330,5 +330,5 @@ def filter_keys_by_suffix(keys, suffix):
     """
     return [key for key in keys if key.endswith(suffix)]
 
-# Run analysis on _metrics data
+# Run analysis on _metrics data_analyzer.py
 analyze_hdf5_levels(hdf5_file)
